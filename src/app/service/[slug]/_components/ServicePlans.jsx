@@ -2,7 +2,7 @@
 import React from "react";
 import { fadeInUp } from "@/app/utils/animations";
 import { motion } from "framer-motion";
-import BlackArrowIcon from "@/icons/blackArrowIcon";
+import BlackArrowIcon from "@/icons/BlackArrowIcon";
 
 const ServicePlans = ({ title, plans }) => {
   const getImageName = (planName) => {
