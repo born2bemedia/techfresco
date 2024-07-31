@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/app/utils/animations";
 import Link from "next/link";
@@ -9,6 +9,24 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HomeSolutions = () => {
   const sliderRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const divRefs = useRef([]);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const SliderSettings = {
     dots: false,
     arrows: true,
@@ -48,6 +66,25 @@ const HomeSolutions = () => {
     }
   };
 
+  const handleMouseMove = (e, index) => {
+    if (isDesktop) {
+      const rect = divRefs.current[index].getBoundingClientRect();
+      setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    }
+  };
+
+  const handleMouseEnter = (index) => {
+    if (isDesktop) {
+      setHoveredIndex(index);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isDesktop) {
+      setHoveredIndex(null);
+    }
+  };
+
   return (
     <section className="home-solutions">
       <div className="_container">
@@ -84,136 +121,59 @@ const HomeSolutions = () => {
               {...SliderSettings}
               className="service-slider"
             >
-              <div>
-                <span className="number">01</span>
-                <h3>Cloud Services</h3>
-                <p>
-                  Selecting scalable cloud solutions for your business needs.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">02</span>
-                <h3>Network Security</h3>
-                <p>
-                  Protecting your network from threats, breaches, occasional and
-                  intentional data leaks.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">03</span>
-                <h3>Hardware Help</h3>
-                <p>
-                  Assistance with installation, maintenance, and repair of
-                  hardware.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">04</span>
-                <h3>Cybersecurity Consulting</h3>
-                <p>
-                  Consulting and implementation of security measures to
-                  safeguard your data.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">05</span>
-                <h3>Backup Solutions</h3>
-                <p>
-                  Selecting and setting reliable data backup and recovery
-                  services.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">06</span>
-                <h3>IT Consulting</h3>
-                <p>
-                  Expert advice to optimise your IT strategy, infrastructure and
-                  local solutions.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">07</span>
-                <h3>Tech Support</h3>
-                <p>Responsive support for all your technical issues.</p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">08</span>
-                <h3>Digital Transformation</h3>
-                <p>
-                  Consulting on modernising your business with the latest
-                  technology.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">09</span>
-                <h3>Mobile and Remote Networking</h3>
-                <p>Solutions for seamless remote and mobile connectivity.</p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">10</span>
-                <h3>Managed IT Services</h3>
-                <p>End-to-end management of your IT infrastructure.</p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">11</span>
-                <h3>Email Services</h3>
-                <p>
-                  Secure and efficient email solutions for your organisation.
-                </p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
-              <div>
-                <span className="number">12</span>
-                <h3>Technology Training</h3>
-                <p>Training programs to upskill your team in technology.</p>
-                <Link className="red-button" href="#">
-                  <span>Explore</span>
-                  <img src="/images/whiteArrow.svg" />
-                </Link>
-              </div>
+              {[
+                "Cloud Services",
+                "Network Security",
+                "Hardware Help",
+                "Cybersecurity Consulting",
+                "Backup Solutions",
+                "IT Consulting",
+                "Tech Support",
+                "Digital Transformation",
+                "Mobile and Remote Networking",
+                "Managed IT Services",
+                "Email Services",
+                "Technology Training"
+              ].map((title, index) => (
+                <div
+                  key={index}
+                  ref={(el) => (divRefs.current[index] = el)}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  onMouseMove={(e) => handleMouseMove(e, index)}
+                >
+                  <span className="number">{String(index + 1).padStart(2, '0')}</span>
+                  <h3>{title}</h3>
+                  <p>
+                    {index === 0 && "Selecting scalable cloud solutions for your business needs."}
+                    {index === 1 && "Protecting your network from threats, breaches, occasional and intentional data leaks."}
+                    {index === 2 && "Assistance with installation, maintenance, and repair of hardware."}
+                    {index === 3 && "Consulting and implementation of security measures to safeguard your data."}
+                    {index === 4 && "Selecting and setting reliable data backup and recovery services."}
+                    {index === 5 && "Expert advice to optimize your IT strategy, infrastructure and local solutions."}
+                    {index === 6 && "Responsive support for all your technical issues."}
+                    {index === 7 && "Consulting on modernizing your business with the latest technology."}
+                    {index === 8 && "Solutions for seamless remote and mobile connectivity."}
+                    {index === 9 && "End-to-end management of your IT infrastructure."}
+                    {index === 10 && "Secure and efficient email solutions for your organization."}
+                    {index === 11 && "Training programs to upskill your team in technology."}
+                  </p>
+                  <Link
+                    className="red-button"
+                    href="#"
+                    style={{
+                      position: "absolute",
+                      left:
+                        hoveredIndex === index && isDesktop ? `${mousePos.x - 50}px` : "initial",
+                      top:
+                        hoveredIndex === index && isDesktop ? `${mousePos.y - 20}px` : "initial",
+                    }}
+                  >
+                    <span>Explore</span>
+                    <img src="/images/whiteArrow.svg" />
+                  </Link>
+                </div>
+              ))}
             </Slider>
           </motion.div>
         </div>

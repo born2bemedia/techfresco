@@ -149,9 +149,11 @@
           display: flex !important;
           .slick-slide {
             padding: 0 rem(8) rem(20) rem(8);
+            padding: 0 rem(8);
             height: inherit !important;
             @media (max-width: rem(992)) {
               padding: 0 0 rem(20) 0;
+              padding: 0;
             }
             &:hover {
               > div {
@@ -174,6 +176,7 @@
             > div {
               height: 100% !important;
               > div {
+                //overflow: hidden;
                 height: 100% !important;
                 background: #ffffff;
                 padding: rem(32);
@@ -186,19 +189,15 @@
                   background: #21282b;
                 }
                 a {
-                  position: absolute;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  bottom: -20px;
                   opacity: 0;
                   pointer-events: none;
                   @media (max-width: rem(992)) {
                     opacity: 1;
                     pointer-events: all;
-                    position: relative;
-                    left: unset;
-                    transform: unset;
-                    bottom: unset;
+                    position: relative!important;
+                    left: unset!important;
+                    transform: unset!important;
+                    bottom: unset!important;
                     margin-top: rem(40);
                   }
                 }
