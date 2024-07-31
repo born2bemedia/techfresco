@@ -5,8 +5,26 @@ import { fadeInUp } from "@/app/utils/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import Marquee from "./Marquee";
+
 
 const HomeHero = () => {
+
+  const marqueeTexts = [
+    "IT",
+    "Consulting",
+    "Support",
+    "IT",
+    "Consulting",
+    "Support",
+    "IT",
+    "Consulting",
+    "Support",
+    "IT",
+    "Consulting",
+    "Support",
+  ];
+
   return (
     <section className="home-hero">
       <div className="_container">
@@ -44,6 +62,7 @@ const HomeHero = () => {
                 Explore Services
               </Link>
             </motion.div>
+            <Marquee texts={marqueeTexts} />
           </div>
           <div className="col-02">
             <Image fill src="/images/home/homeHero.png" />
