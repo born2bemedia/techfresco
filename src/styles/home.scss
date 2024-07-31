@@ -1,0 +1,74 @@
+@import "mixin";
+
+.home-hero {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(80);
+  }
+  &__body {
+    display: flex;
+    gap: rem(16);
+    align-items: stretch;
+    @media (max-width: rem(992)) {
+      flex-direction: column;
+    }
+    .col-01 {
+      padding: rem(90);
+      background: #fff;
+      border-radius: rem(16);
+      width: calc(75% - rem(8));
+      @media (max-width: rem(992)) {
+        width: 100%;
+        padding: rem(48) rem(24) rem(24) rem(24);
+      }
+    }
+    .col-02 {
+      width: calc(25% - rem(8));
+      height: rem(620);
+      position: relative;
+      border-radius: rem(16);
+      overflow: hidden;
+      @media (max-width: rem(992)) {
+        width: 100%;
+        height: rem(240);
+        img {
+          height: auto;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  h2 {
+    font-size: rem(16);
+    font-weight: 300;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 0 rem(5) 0;
+    color: #ee342a;
+    @media (max-width: rem(992)) {
+    }
+  }
+  h1 {
+    color: #21282b;
+    font-size: rem(64);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0 0 rem(64) 0;
+    @media (max-width: rem(992)) {
+      font-size: rem(32);
+      br {
+        display: none;
+      }
+    }
+  }
+  .buttons-wrap {
+    display: flex;
+    gap: rem(30);
+    @media (max-width: rem(992)) {
+      gap: rem(16);
+    }
+  }
+}
