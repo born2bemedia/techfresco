@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 import { fadeInUp } from "@/app/utils/animations";
 import Link from "next/link";
 import Slider from "react-slick";
-import services from "@/lib/services";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const HomeSolutions = () => {
+const ServiceSolutions = ({ categories, categoriesTitle }) => {
   const sliderRef = useRef(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -30,7 +29,7 @@ const HomeSolutions = () => {
 
   const SliderSettings = {
     dots: false,
-    arrows: false,
+    arrows: false, // Disable default arrows
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -87,9 +86,9 @@ const HomeSolutions = () => {
   };
 
   return (
-    <section className="home-solutions">
+    <section className="service-solutions">
       <div className="_container">
-        <div className="home-solutions__body">
+        <div className="service-solutions__body">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -97,7 +96,7 @@ const HomeSolutions = () => {
             variants={fadeInUp}
             className="solution-top"
           >
-            <h2>Our Solutions</h2>
+            <h2>{categoriesTitle}</h2>
             <div className="arrows">
               <img
                 src="/images/home/arrowPrev.svg"
@@ -124,43 +123,54 @@ const HomeSolutions = () => {
               {...SliderSettings}
               className="service-slider"
             >
-              {Object.keys(services).map((key, index) => {
-                const service = services[key];
-                return (
-                  <div
-                    key={index}
-                    ref={(el) => (divRefs.current[index] = el)}
-                    onMouseEnter={() => handleMouseEnter(index)}
-                    onMouseLeave={handleMouseLeave}
-                    onMouseMove={(e) => handleMouseMove(e, index)}
+              {categories.map((category, index) => (
+                <div
+                  key={index}
+                  ref={(el) => (divRefs.current[index] = el)}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  onMouseMove={(e) => handleMouseMove(e, index)}
+                >
+                  <span className="number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <h3>{category.title}</h3>
+                  <p>{category.description}</p>
+                  <Link
+                    className="red-button"
+                    href="#"
+                    style={{
+                      position: "absolute",
+                      left:
+                        hoveredIndex === index && isDesktop
+                          ? `${mousePos.x - 50}px`
+                          : "initial",
+                      top:
+                        hoveredIndex === index && isDesktop
+                          ? `${mousePos.y - 20}px`
+                          : "initial",
+                    }}
                   >
-                    <span className="number">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <h3>{service.title}</h3>
-                    <p>{service.excerpt}</p>
-                    <Link
-                      className="red-button"
-                      href={`/service/${service.slug}`}
-                      style={{
-                        position: "absolute",
-                        left:
-                          hoveredIndex === index && isDesktop
-                            ? `${mousePos.x - 50}px`
-                            : "initial",
-                        top:
-                          hoveredIndex === index && isDesktop
-                            ? `${mousePos.y - 20}px`
-                            : "initial",
-                      }}
-                    >
-                      <span>Explore</span>
-                      <img src="/images/whiteArrow.svg" />
-                    </Link>
-                  </div>
-                );
-              })}
+                    <span>Order</span>
+                    <img src="/images/whiteArrow.svg" />
+                  </Link>
+                </div>
+              ))}
             </Slider>
+            <div className="arrows-bottom">
+              <img
+                src="/images/home/arrowPrev.svg"
+                alt="Previous"
+                onClick={handlePrevClick}
+                style={{ cursor: "pointer" }}
+              />
+              <img
+                src="/images/home/arrowNext.svg"
+                alt="Next"
+                onClick={handleNextClick}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
           </motion.div>
         </div>
       </div>
@@ -168,4 +178,4 @@ const HomeSolutions = () => {
   );
 };
 
-export default HomeSolutions;
+export default ServiceSolutions;

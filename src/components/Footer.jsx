@@ -55,16 +55,18 @@ const Footer = () => {
                 <h3>Services</h3>
                 <ul>
                   <li>
-                    <Link href="#">Cloud services</Link>
+                    <Link href="/service/cloud-services">Cloud services</Link>
                   </li>
                   <li>
-                    <Link href="#">Network Security</Link>
+                    <Link href="/service/network-security">
+                      Network Security
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Hardware help</Link>
+                    <Link href="/service/hardware-help">Hardware help</Link>
                   </li>
                   <li>
-                    <Link href="#">Cybersecurity</Link>
+                    <Link href="/service/cybersecurity">Cybersecurity</Link>
                   </li>
                   <li>
                     <Link href="#">Backup solutions</Link>

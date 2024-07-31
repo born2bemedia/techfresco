@@ -121,10 +121,16 @@ a {
   align-items: center;
   color: #21282b;
   gap: rem(8);
+  background: transparent;
   &:hover {
     border-color: #f15048;
     background: #f15048;
     color: #fff;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
   &.red {
     color: #ee342a;
@@ -133,6 +139,11 @@ a {
       border-color: #f15048;
       background: #f15048;
       color: #fff;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
     }
   }
   @media (max-width: rem(992)) {
@@ -160,6 +171,11 @@ a {
     border-color: #f15048;
     background: #f15048;
     color: #fff;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
   @media (max-width: rem(992)) {
     padding: 0 rem(20);
@@ -168,7 +184,7 @@ a {
 }
 
 .red-button {
-  border: rem(1) solid #EE342A;
+  border: rem(1) solid #ee342a;
   border-radius: rem(50);
   height: rem(40);
   padding: 0 rem(24);
@@ -181,14 +197,55 @@ a {
   align-items: center;
   color: #fff;
   gap: rem(8);
-  background: #EE342A;
+  background: #ee342a;
   &:hover {
     border-color: #f15048;
     background: #f15048;
     color: #fff;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
   }
   @media (max-width: rem(992)) {
     padding: 0 rem(20);
     font-size: rem(15);
+  }
+}
+
+.pricing-banner {
+  margin: rem(100) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(80) 0;
+  }
+  &__body {
+    background-color: #21282b;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/services/pricingBack.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(80) rem(90);
+    border-radius: rem(16);
+    gap: rem(48);
+    @media (max-width: rem(992)) {
+      flex-direction: column;
+      padding: rem(80) rem(24);
+    }
+    h2 {
+      color: #fff;
+      font-size: rem(36);
+      font-weight: 500;
+      line-height: 1.2;
+      text-align: left;
+      margin: 0;
+      width: 65%;
+      @media (max-width: rem(992)) {
+        width: 100%;
+        font-size: rem(30);
+      }
+    }
   }
 }
