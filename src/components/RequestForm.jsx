@@ -2,19 +2,22 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CheckboxIcon from "@/icons/CheckboxIcon";
-//import { usePopup } from "@/context/PopupsContext";
+import { usePopup } from "@/context/PopupsContext";
+import ThanksPopup from "./ThanksPopup";
 
 const RequestForm = () => {
-  //const { thanksPopupDisplay, setThanksPopupDisplay } = usePopup();
+  const { thanksPopupDisplay, setThanksPopupDisplay } = usePopup();
 
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+    name: Yup.string().required("Please enter your full name"),
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-    phone: Yup.string().required("Phone is required"),
-    company: Yup.string(),
-    message: Yup.string(),
+      .email("Please enter a valid email address.")
+      .required("Please provide your email address."),
+    phone: Yup.string().required("Please enter a valid phone number."),
+    company: Yup.string().required(
+      "Please provide your company name and website."
+    ),
+    message: Yup.string().required("Please enter your message."),
     policy: Yup.bool().oneOf([true], "You must accept privacy policy."),
   });
 
@@ -30,7 +33,7 @@ const RequestForm = () => {
 
   const handleSubmit = async (
     values,
-    { setSubmitting, resetForm, setStatus }
+    { setSubmitting, resetForm, setStatus, status }
   ) => {
     setSubmitting(false);
     resetForm();
@@ -61,86 +64,126 @@ const RequestForm = () => {
   };
 
   return (
-    <div className="request-form">
-      <Formik
-        initialValues={initialValues}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting, status, touched, errors }) => (
-          <Form>
-            <div>
-              <Field
-                name="name"
-                type="text"
-                placeholder="Full Name"
-                className={touched.name && errors.name ? "invalid" : ""}
-              />
-            </div>
+    <>
+      <div className="request-form">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting, status, touched, errors }) => (
+            <>
+              <Form>
+                <div>
+                  <Field
+                    name="name"
+                    type="text"
+                    placeholder="Full Name"
+                    className={touched.name && errors.name ? "invalid" : ""}
+                  />
+                  <ErrorMessage name="name" component="div" className="error" />
+                </div>
 
-            <div>
-              <Field
-                name="email"
-                type="email"
-                placeholder="Email"
-                className={touched.email && errors.email ? "invalid" : ""}
-              />
-            </div>
+                <div>
+                  <Field
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    className={touched.email && errors.email ? "invalid" : ""}
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="error"
+                  />
+                </div>
 
-            <div>
-              <Field
-                name="phone"
-                type="tel"
-                placeholder="Phone"
-                className={touched.phone && errors.phone ? "invalid" : ""}
-              />
-            </div>
+                <div>
+                  <Field
+                    name="phone"
+                    type="tel"
+                    placeholder="Phone"
+                    className={touched.phone && errors.phone ? "invalid" : ""}
+                  />
+                  <ErrorMessage
+                    name="phone"
+                    component="div"
+                    className="error"
+                  />
+                </div>
 
-            <div>
-              <Field
-                name="company"
-                type="text"
-                placeholder="Company and website"
-                className={touched.company && errors.company ? "invalid" : ""}
-              />
-            </div>
+                <div>
+                  <Field
+                    name="company"
+                    type="text"
+                    placeholder="Company and website"
+                    className={
+                      touched.company && errors.company ? "invalid" : ""
+                    }
+                  />
+                  <ErrorMessage
+                    name="company"
+                    component="div"
+                    className="error"
+                  />
+                </div>
 
-            <div className="full">
-              <Field
-                name="message"
-                as="textarea"
-                placeholder="Message"
-                className={touched.message && errors.message ? "invalid" : ""}
-              />
-            </div>
+                <div className="full">
+                  <Field
+                    name="message"
+                    as="textarea"
+                    placeholder="Message"
+                    className={
+                      touched.message && errors.message ? "invalid" : ""
+                    }
+                  />
+                  <ErrorMessage
+                    name="message"
+                    component="div"
+                    className="error"
+                  />
+                </div>
 
-            <div className="checkbox">
-              <Field
-                type="checkbox"
-                name="policy"
-                className={touched.policy && errors.policy ? "invalid" : ""}
-                id="policy"
-              />
-              <label for="policy">
-                <CheckboxIcon />
-                <span>
-                  I consent to Tech Fresco storing my information to handle my
-                  inquiry, as the Privacy Policy outlines.
-                </span>
-              </label>
-            </div>
+                <div className="checkbox">
+                  <Field
+                    type="checkbox"
+                    name="policy"
+                    className={touched.policy && errors.policy ? "invalid" : ""}
+                    id="policy"
+                  />
+                  <label for="policy">
+                    <CheckboxIcon />
+                    <span>
+                      I consent to Tech Fresco storing my information to handle
+                      my inquiry, as the Privacy Policy outlines.
+                    </span>
+                  </label>
+                </div>
 
-            <button
-              type="submit"
-              className="red-button"
-              disabled={isSubmitting}
-            >
-              Get Assistance
-            </button>
-          </Form>
-        )}
-      </Formik>
-    </div>
+                <button
+                  type="submit"
+                  className="red-button"
+                  disabled={isSubmitting}
+                >
+                  Get Assistance
+                </button>
+              </Form>
+              {status && status.success && (
+                <div className="success-message">
+                  <img src="/images/success.svg" alt="Success" />
+                  <span>
+                    <b>Thank you for your request!</b> We have received your
+                    information, and our managers will be in touch with you
+                    shortly.
+                  </span>
+                </div>
+              )}
+            </>
+          )}
+        </Formik>
+      </div>
+      <ThanksPopup />
+    </>
   );
 };
 

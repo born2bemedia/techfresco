@@ -3,6 +3,7 @@ import "@/styles/base.scss";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
+import { PopupsProvider } from "@/context/PopupsContext";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <Preloader />
-        <Header />
-        <main className="site">{children}</main>
-        <Footer />
+        <PopupsProvider>
+          <Preloader />
+          <Header />
+          <main className="site">{children}</main>
+          <Footer />
+        </PopupsProvider>
       </body>
     </html>
   );
