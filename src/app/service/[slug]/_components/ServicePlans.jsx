@@ -3,8 +3,21 @@ import React from "react";
 import { fadeInUp } from "@/app/utils/animations";
 import { motion } from "framer-motion";
 import BlackArrowIcon from "@/icons/BlackArrowIcon";
+import { usePopup } from "@/context/PopupsContext";
 
 const ServicePlans = ({ title, plans }) => {
+  const {
+    orderPopupDisplay,
+    setOrderPopupDisplay,
+    serviceValue,
+    setServiceValue,
+  } = usePopup();
+
+  const orderPopupOpen = (service) => {
+    setServiceValue(service);
+    setOrderPopupDisplay(true);
+  };
+
   const getImageName = (planName) => {
     return planName.toLowerCase().replace(/\s+/g, "_");
   };
@@ -44,7 +57,10 @@ const ServicePlans = ({ title, plans }) => {
                 </div>
                 <div className="plan-bottom">
                   <p dangerouslySetInnerHTML={{ __html: plan.price }} />
-                  <button className="bordered-button">
+                  <button
+                    className="bordered-button"
+                    onClick={() => orderPopupOpen(`${title}: ${plan.planName}`)}
+                  >
                     <span>Order</span>
                     <BlackArrowIcon />
                   </button>

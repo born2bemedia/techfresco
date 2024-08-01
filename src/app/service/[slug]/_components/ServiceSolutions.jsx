@@ -6,6 +6,7 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { usePopup } from "@/context/PopupsContext";
 
 const ServiceSolutions = ({ categories, categoriesTitle }) => {
   const sliderRef = useRef(null);
@@ -13,6 +14,17 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const divRefs = useRef([]);
+  const {
+    orderPopupDisplay,
+    setOrderPopupDisplay,
+    serviceValue,
+    setServiceValue,
+  } = usePopup();
+
+  const orderPopupOpen = (service) => {
+    setServiceValue(service);
+    setOrderPopupDisplay(true);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -136,7 +148,8 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
                   </span>
                   <h3>{category.title}</h3>
                   <p>{category.description}</p>
-                  <Link
+                  <button
+                    onClick={() => orderPopupOpen(category.title)}
                     className="red-button"
                     href="#"
                     style={{
@@ -153,7 +166,7 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
                   >
                     <span>Order</span>
                     <img src="/images/whiteArrow.svg" />
-                  </Link>
+                  </button>
                 </div>
               ))}
             </Slider>

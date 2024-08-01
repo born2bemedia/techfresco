@@ -5,6 +5,7 @@ import ServiceHero from "./_components/ServiceHero";
 import ServiceSolutions from "./_components/ServiceSolutions";
 import PricingBanner from "./_components/PricingBanner";
 import ServicePlans from "./_components/ServicePlans";
+import OrderPopup from "@/components/OrderPopup";
 
 const InnerService = ({ params: { slug } }) => {
   const serviceName = slug.replace("-", "_");
@@ -24,6 +25,7 @@ const InnerService = ({ params: { slug } }) => {
       />
       <ServicePlans title={serviceData.title} plans={serviceData.plans} />
       <PricingBanner />
+      <OrderPopup />
     </>
   );
 };

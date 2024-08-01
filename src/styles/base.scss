@@ -462,7 +462,8 @@ a {
   }
 }
 
-.request-popup-wrap, .order-popup-wrap {
+.request-popup-wrap,
+.order-popup-wrap {
   position: fixed;
   left: 0;
   top: 0;
@@ -541,6 +542,12 @@ a {
         font-size: rem(32);
         br {
           display: none;
+        }
+      }
+      &.service-title {
+        font-size: rem(28);
+        @media (max-width: rem(992)) {
+          font-size: rem(20);
         }
       }
     }
