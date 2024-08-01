@@ -537,7 +537,7 @@ a {
       line-height: 1.2;
       text-align: left;
       color: #f8f8f8;
-      width: 100%;
+      width: calc(100% - rem(48));
       @media (max-width: rem(992)) {
         font-size: rem(32);
         br {
@@ -546,6 +546,7 @@ a {
       }
       &.service-title {
         font-size: rem(28);
+
         @media (max-width: rem(992)) {
           font-size: rem(20);
         }
