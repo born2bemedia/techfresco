@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import Marquee from "./Marquee";
-
+import RequestButton from "@/components/RequestButton";
 
 const HomeHero = () => {
-
   const marqueeTexts = [
     "IT",
     "Consulting",
@@ -54,9 +53,10 @@ const HomeHero = () => {
               variants={fadeInUp}
               className="buttons-wrap"
             >
-              <Link href="#" className="black-button">
-                Get Assistance
-              </Link>
+              <RequestButton
+                className={"black-button"}
+                text={"Get Assistance"}
+              />
               <Link href="#" className="bordered-button red">
                 Explore Services
               </Link>

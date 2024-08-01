@@ -4,6 +4,7 @@ import { fadeInUp } from "@/app/utils/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import RequestButton from "@/components/RequestButton";
 
 const HomeApproach = () => {
   return (
@@ -29,9 +30,7 @@ const HomeApproach = () => {
                 We take a systematic approach to understand and enhance your IT
                 infrastructure:
               </motion.p>
-              <Link href="#" className="red-button">
-                Get Assistance
-              </Link>
+              <RequestButton className={"red-button"} text={"Get Assistance"} />
             </div>
             <Image
               src="/images/home/approachMob.png"

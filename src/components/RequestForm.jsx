@@ -165,7 +165,7 @@ const RequestForm = () => {
                   className="red-button"
                   disabled={isSubmitting}
                 >
-                  Get Assistance
+                  Submit
                 </button>
               </Form>
               {status && status.success && (
@@ -182,7 +182,6 @@ const RequestForm = () => {
           )}
         </Formik>
       </div>
-      <ThanksPopup />
     </>
   );
 };

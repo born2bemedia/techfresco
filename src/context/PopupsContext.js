@@ -4,6 +4,7 @@ import React, { useState, useEffect, createContext, useContext } from "react";
 const PopupsContext = createContext();
 
 export const PopupsProvider = ({ children }) => {
+  const [requestPopupDisplay, setRequestPopupDisplay] = useState(false);
   const [orderPopupDisplay, setOrderPopupDisplay] = useState(false);
   const [thanksPopupDisplay, setThanksPopupDisplay] = useState(false);
   const [serviceValue, setServiceValue] = useState(false);
@@ -11,6 +12,8 @@ export const PopupsProvider = ({ children }) => {
   return (
     <PopupsContext.Provider
       value={{
+        requestPopupDisplay,
+        setRequestPopupDisplay,
         orderPopupDisplay,
         setOrderPopupDisplay,
         thanksPopupDisplay,

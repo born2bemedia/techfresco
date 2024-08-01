@@ -5,6 +5,7 @@ import { fadeInUp } from "@/app/utils/animations";
 import Link from "next/link";
 import Image from "next/image";
 import Marquee from "./Marquee";
+import RequestButton from "@/components/RequestButton";
 
 const HowItWorks = () => {
   const marqueeTexts = [
@@ -165,9 +166,7 @@ const HowItWorks = () => {
           className="how-it-works__banner"
         >
           <h2>Want the same results for your business? Contact us now!</h2>
-          <Link href="#" className="red-button">
-            Get Assistance
-          </Link>
+          <RequestButton className={"red-button"} text={"Get Assistance"} />
         </motion.div>
       </div>
     </section>

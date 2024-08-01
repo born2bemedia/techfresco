@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
 import { PopupsProvider } from "@/context/PopupsContext";
+import RequestPopup from "@/components/RequestPopup";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <Header />
           <main className="site">{children}</main>
           <Footer />
+          <RequestPopup />
         </PopupsProvider>
       </body>
     </html>

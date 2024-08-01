@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInUp } from "@/app/utils/animations";
 import Link from "next/link";
+import RequestButton from "@/components/RequestButton";
 
 const PricingBanner = () => {
   return (
@@ -19,9 +20,7 @@ const PricingBanner = () => {
             For a detailed quote or customised pricing, please contact us
             directly.
           </h2>
-          <Link href="#" className="red-button">
-            Get Assistance
-          </Link>
+          <RequestButton className={"red-button"} text={"Get Assistance"} />
         </motion.div>
       </div>
     </section>
