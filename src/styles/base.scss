@@ -250,3 +250,92 @@ a {
     }
   }
 }
+
+.request-form {
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(16);
+
+    button {
+      width: 100%;
+    }
+
+    > div {
+      width: calc(50% - rem(8));
+
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+
+      &.full {
+        width: 100%;
+      }
+
+      &.checkbox {
+        width: 100%;
+        input {
+          display: none;
+          &:checked + label {
+            svg {
+              circle:last-child {
+                opacity: 1;
+                transition: all 0.5s;
+              }
+            }
+          }
+          &.invalid+label{
+            color: #ee342a;
+          }
+        }
+        label {
+          display: flex;
+          align-items: flex-start;
+          gap: rem(8);
+          justify-content: center;
+          color: #f8f8f8;
+          font-size: rem(16);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
+          svg {
+            margin-top: rem(3);
+            width: rem(16);
+            circle:last-child {
+              opacity: 0;
+              transition: all 0.5s;
+            }
+          }
+          span {
+            @media (max-width: rem(992)) {
+              width: calc(100% - 24px);
+            }
+          }
+        }
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        height: rem(40);
+        color: #21282b;
+        padding: 0 rem(24);
+        background-color: #fff;
+        border-radius: rem(20);
+        border: 1px solid #fff;
+        &::placeholder {
+          color: #878787;
+        }
+        &.invalid {
+          background: rgb(252 214 212);
+          border: 1px solid #ee342a;
+        }
+      }
+      textarea {
+        border-radius: rem(16);
+        padding: rem(10) rem(24);
+        height: rem(80);
+      }
+    }
+  }
+}
