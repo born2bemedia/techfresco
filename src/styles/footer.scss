@@ -39,6 +39,9 @@ footer {
             color: #878787;
             font-weight: 400;
             font-size: rem(16);
+            &:hover{
+              color: #ee342a;
+            }
           }
         }
       }
@@ -79,6 +82,9 @@ footer {
         text-align: left;
         a {
           color: #21282b;
+          &:hover{
+            color: #ee342a;
+          }
         }
         .account {
           display: flex;
