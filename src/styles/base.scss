@@ -282,6 +282,34 @@ a {
       width: 100%;
     }
 
+    .react-tel-input {
+      input {
+        font-size: rem(16);
+        width: 100%;
+        height: rem(40);
+        color: #21282b;
+        padding: 0 rem(24) 0 rem(48);
+        background-color: #fff;
+        border-radius: rem(20);
+        border: 1px solid #fff;
+        &::placeholder {
+          color: #878787;
+        }
+      }
+      &.invalid {
+        background: rgb(252 214 212);
+        border: 1px solid #ee342a;
+      }
+      .flag-dropdown {
+        border: none !important;
+        background: transparent !important;
+      }
+      .selected-flag {
+        border: none !important;
+        background: transparent !important;
+      }
+    }
+
     > div {
       width: calc(50% - rem(8));
       position: relative;

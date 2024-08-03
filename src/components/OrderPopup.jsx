@@ -13,9 +13,13 @@ import { usePopup } from "@/context/PopupsContext";
 import ButtonArrow from "@/icons/ButtonArrow";
 import CheckboxIcon from "@/icons/CheckboxIcon";
 import Select, { components } from "react-select";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
+import useCountryCode from "@/utils/useCountryCode";
 
 function OrderPopup() {
   const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
+  const countryCode = useCountryCode();
 
   const industry = [
     { value: "Agriculture", label: "Agriculture" },
@@ -273,19 +277,16 @@ function OrderPopup() {
                       </div>
 
                       <div>
-                        <Field
-                          name="phone"
-                          type="tel"
-                          placeholder="Phone"
+                        <PhoneInput
+                          country={countryCode}
+                          value=""
+                          onChange={(value) => setFieldValue("phone", value)}
+                          placeholder="Your phone"
                           className={
                             touched.phone && errors.phone ? "invalid" : ""
                           }
                         />
-                        <ErrorMessage
-                          name="phone"
-                          component="div"
-                          className="error"
-                        />
+                        <ErrorMessage name="phone" component="span" />
                       </div>
 
                       <div>

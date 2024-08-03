@@ -4,9 +4,13 @@ import * as Yup from "yup";
 import CheckboxIcon from "@/icons/CheckboxIcon";
 import { usePopup } from "@/context/PopupsContext";
 import ThanksPopup from "./ThanksPopup";
+import "react-phone-input-2/lib/style.css";
+import PhoneInput from "react-phone-input-2";
+import useCountryCode from "@/utils/useCountryCode";
 
 const RequestForm = () => {
   const { thanksPopupDisplay, setThanksPopupDisplay } = usePopup();
+  const countryCode = useCountryCode();
 
   const validationSchema = Yup.object({
     name: Yup.string().required("Please enter your full name"),
@@ -99,17 +103,14 @@ const RequestForm = () => {
                 </div>
 
                 <div>
-                  <Field
-                    name="phone"
-                    type="tel"
-                    placeholder="Phone"
+                  <PhoneInput
+                    country={countryCode}
+                    value=""
+                    onChange={(value) => setFieldValue("phone", value)}
+                    placeholder="Your phone"
                     className={touched.phone && errors.phone ? "invalid" : ""}
                   />
-                  <ErrorMessage
-                    name="phone"
-                    component="div"
-                    className="error"
-                  />
+                  <ErrorMessage name="phone" component="span" />
                 </div>
 
                 <div>
