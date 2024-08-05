@@ -64,7 +64,7 @@ header {
   pointer-events: none;
   backdrop-filter: blur(rem(10));
   @media (max-width: rem(992)) {
-    padding-top: rem(120);
+    padding-top: rem(100);
   }
   &.opened {
     left: 0;

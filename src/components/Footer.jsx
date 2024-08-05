@@ -72,7 +72,7 @@ const Footer = () => {
                     <Link href="#">Backup solutions</Link>
                   </li>
                   <li>
-                    <Link href="#">IT consulting</Link>
+                    <Link href="/service/it-consulting">IT consulting</Link>
                   </li>
                 </ul>
               </div>
@@ -80,22 +80,22 @@ const Footer = () => {
                 <h3>&nbsp;</h3>
                 <ul>
                   <li>
-                    <Link href="#">Tech support</Link>
+                    <Link href="/service/tech-support">Tech support</Link>
                   </li>
                   <li>
-                    <Link href="#">Digital transformation</Link>
+                    <Link href="/service/digital-transformation">Digital transformation</Link>
                   </li>
                   <li>
-                    <Link href="#">Mobile and remote networking</Link>
+                    <Link href="/service/mobile-remote-networking">Mobile and remote networking</Link>
                   </li>
                   <li>
-                    <Link href="#">Managed IT services</Link>
+                    <Link href="/service/managed-it-services">Managed IT services</Link>
                   </li>
                   <li>
-                    <Link href="#">Email services</Link>
+                    <Link href="/service/email-services">Email services</Link>
                   </li>
                   <li>
-                    <Link href="#">Technology training</Link>
+                    <Link href="/service/technology-training">Technology training</Link>
                   </li>
                 </ul>
               </div>
