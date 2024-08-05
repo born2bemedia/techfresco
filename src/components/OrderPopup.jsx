@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Formik,
   Form,
@@ -20,6 +20,10 @@ import useCountryCode from "@/utils/useCountryCode";
 function OrderPopup() {
   const { orderPopupDisplay, setOrderPopupDisplay, serviceValue } = usePopup();
   const countryCode = useCountryCode();
+
+  useEffect(() => {
+    console.log("Service Value: ", serviceValue); // Check the serviceValue in console
+  }, [serviceValue]);
 
   const industry = [
     { value: "Agriculture", label: "Agriculture" },
@@ -164,7 +168,7 @@ function OrderPopup() {
     policy: false,
     industry: "",
     challenges: "",
-    service: serviceValue,
+    service: serviceValue || "",
   };
 
   const closePopup = (resetForm) => {
@@ -178,21 +182,24 @@ function OrderPopup() {
     values,
     { setSubmitting, resetForm, setStatus }
   ) => {
-    setSubmitting(false);
-    resetForm();
-    setStatus({ success: true });
-    /*try {
+    const valuesWithService = {
+      ...values,
+      service: serviceValue,
+    };
+
+    console.log("Form values being submitted: ", valuesWithService);
+
+    try {
       const response = await fetch("/api/emails/order", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(values),
+        body: JSON.stringify(valuesWithService),
       });
-      console.log(JSON.stringify(values));
+
       if (response.ok) {
         setTimeout(() => {
-          console.log(JSON.stringify(values, null, 2));
           setSubmitting(false);
           resetForm();
           setStatus({ success: true });
@@ -204,7 +211,7 @@ function OrderPopup() {
       console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
-    }*/
+    }
   };
 
   return (
@@ -243,7 +250,7 @@ function OrderPopup() {
                   <>
                     <Form>
                       <div>
-                        <Field type="hidden" name="service" value={serviceValue} />
+                        <Field type="hidden" name="service" />
                         <Field
                           name="name"
                           type="text"

@@ -27,7 +27,6 @@ const RequestForm = () => {
 
   const initialValues = {
     name: "",
-    lastName: "",
     email: "",
     phone: "",
     company: "",
@@ -42,7 +41,7 @@ const RequestForm = () => {
     setSubmitting(false);
     resetForm();
     setStatus({ success: true });
-    /*try {
+    try {
       const response = await fetch("/api/emails/contact", {
         method: "POST",
         headers: {
@@ -64,7 +63,7 @@ const RequestForm = () => {
       }
     } catch (error) {
       console.error(error);
-    }*/
+    }
   };
 
   return (
@@ -75,7 +74,7 @@ const RequestForm = () => {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ isSubmitting, status, touched, errors }) => (
+          {({ isSubmitting, status, touched, errors, setFieldValue  }) => (
             <>
               <Form>
                 <div>

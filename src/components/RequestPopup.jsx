@@ -20,7 +20,7 @@ import useCountryCode from "@/utils/useCountryCode";
 function RequestPopup() {
   const { requestPopupDisplay, setRequestPopupDisplay, serviceValue } =
     usePopup();
-    const countryCode = useCountryCode();
+  const countryCode = useCountryCode();
 
   const services = [
     { value: "Cloud services", label: "Cloud services" },
@@ -176,7 +176,7 @@ function RequestPopup() {
     ),
     message: Yup.string().required("Please enter your message."),
     policy: Yup.bool().oneOf([true], "You must accept privacy policy."),
-    services: Yup.string().required("Please select necessary options."),
+    service: Yup.string().required("Please select necessary options."),
     industry: Yup.string().required("Please specify your industry."),
     challenges: Yup.string().required("Please select your challenges."),
   });
@@ -188,8 +188,8 @@ function RequestPopup() {
     phone: "",
     company: "",
     message: "",
-    policy: false,
-    services: "",
+    policyCheckbox: false,
+    service: "",
     industry: "",
     challenges: "",
   };
@@ -208,7 +208,7 @@ function RequestPopup() {
     setSubmitting(false);
     resetForm();
     setStatus({ success: true });
-    /*try {
+    try {
       const response = await fetch("/api/emails/order", {
         method: "POST",
         headers: {
@@ -231,7 +231,7 @@ function RequestPopup() {
       console.error(error);
       setStatus({ success: false });
       setSubmitting(false);
-    }*/
+    }
   };
 
   return (
@@ -334,20 +334,20 @@ function RequestPopup() {
 
                       <div className="full">
                         <Select
-                          name="services"
+                          name="service"
                           options={services}
                           styles={customStyles}
                           components={{ DropdownIndicator }}
                           className={`form-field ${
-                            touched.services && errors.services ? "invalid" : ""
+                            touched.service && errors.service ? "invalid" : ""
                           }`}
                           onChange={(option) =>
-                            setFieldValue("services", option.value)
+                            setFieldValue("service", option.value)
                           }
                           placeholder="What services are you interested in?"
                         />
                         <ErrorMessage
-                          name="services"
+                          name="service"
                           component="div"
                           className="error"
                         />
@@ -416,13 +416,13 @@ function RequestPopup() {
                       <div className="checkbox">
                         <Field
                           type="checkbox"
-                          name="policy"
+                          name="policyCheckbox"
                           className={
-                            touched.policy && errors.policy ? "invalid" : ""
+                            touched.policyCheckbox && errors.policyCheckbox ? "invalid" : ""
                           }
-                          id="policy"
+                          id="policyCheckbox"
                         />
-                        <label for="policy">
+                        <label for="policyCheckbox">
                           <CheckboxIcon />
                           <span>
                             I consent to Tech Fresco storing my information to
