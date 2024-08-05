@@ -354,6 +354,12 @@ const services = {
       "Assessment",
       "Management",
       "Transformation",
+      "Assessment",
+      "Management",
+      "Transformation",
+      "Assessment",
+      "Management",
+      "Transformation",
     ],
     categoriesTitle: "Instant IT Consulting Services",
     categories: [
@@ -438,14 +444,7 @@ const services = {
     slug: "tech-support",
     excerpt: "Instant support services for IT issues.",
     advantages: [
-      "Help Desk Support",
-      "On-Site Support",
-      "Remote Support",
-      "System Setup and Configuration",
-      "Software Troubleshooting",
-      "Hardware Repair and Maintenance",
-      "Network Support",
-      "User Training",
+      
     ],
     categoriesTitle: "Instant Tech Support Services",
     categories: [
