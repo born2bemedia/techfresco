@@ -349,7 +349,8 @@ const services = {
     number: "05",
     title: "Information Technology Consulting",
     slug: "it-consulting",
-    excerpt: "Assessment, management, and transformation of IT infrastructure.",
+    excerpt:
+      "Expert advice to optimise your IT strategy, infrastructure and local solutions.",
     advantages: [
       "Assessment",
       "Management",
@@ -366,42 +367,50 @@ const services = {
       {
         number: "01",
         title: "IT Strategy Development",
-        description: "Crafting comprehensive IT strategies that align with your business objectives.",
+        description:
+          "Crafting comprehensive IT strategies that align with your business objectives.",
       },
       {
         number: "02",
         title: "Technology Assessment",
-        description: "Evaluating your current IT systems and identifying areas for improvement.",
+        description:
+          "Evaluating your current IT systems and identifying areas for improvement.",
       },
       {
         number: "03",
         title: "Digital Transformation",
-        description: "Guiding your business through adopting new technologies and digital tools.",
+        description:
+          "Guiding your business through adopting new technologies and digital tools.",
       },
       {
         number: "04",
         title: "Project Management",
-        description: "Overseeing IT projects from inception to completion, ensuring they meet timelines and budgets.",
+        description:
+          "Overseeing IT projects from inception to completion, ensuring they meet timelines and budgets.",
       },
       {
         number: "05",
         title: "Vendor Management",
-        description: "Assisting with selecting and managing IT vendors and service providers.",
+        description:
+          "Assisting with selecting and managing IT vendors and service providers.",
       },
       {
         number: "06",
         title: "Risk Management",
-        description: "Identifying and mitigating IT risks to safeguard your business operations.",
+        description:
+          "Identifying and mitigating IT risks to safeguard your business operations.",
       },
       {
         number: "07",
         title: "Cost Optimization",
-        description: "Analysis and optimization of your IT budget to ensure cost-effectiveness.",
+        description:
+          "Analysis and optimization of your IT budget to ensure cost-effectiveness.",
       },
       {
         number: "08",
         title: "Compliance and Governance",
-        description: "Ensuring your IT practices comply with industry regulations and standards.",
+        description:
+          "Ensuring your IT practices comply with industry regulations and standards.",
       },
     ],
     plans: [
@@ -442,21 +451,28 @@ const services = {
     number: "06",
     title: "Tech Support",
     slug: "tech-support",
-    excerpt: "Instant support services for IT issues.",
+    excerpt: "Responsive support for all your technical issues.",
     advantages: [
-      
+      "Remote Assistance",
+      "Configuration",
+      "Maintenance",
+      "Remote Assistance",
+      "Configuration",
+      "Maintenance",
     ],
     categoriesTitle: "Instant Tech Support Services",
     categories: [
       {
         number: "01",
         title: "Help Desk Support",
-        description: "Immediate assistance for IT issues through phone, email, or chat.",
+        description:
+          "Immediate assistance for IT issues through phone, email, or chat.",
       },
       {
         number: "02",
         title: "On-Site Support",
-        description: "Professional support for more complex issues that require on-site intervention.",
+        description:
+          "Professional support for more complex issues that require on-site intervention.",
       },
       {
         number: "03",
@@ -481,12 +497,14 @@ const services = {
       {
         number: "07",
         title: "Network Support",
-        description: "Managing and troubleshooting network issues to ensure connectivity.",
+        description:
+          "Managing and troubleshooting network issues to ensure connectivity.",
       },
       {
         number: "08",
         title: "User Training",
-        description: "Educating staff on effectively using IT systems and tools.",
+        description:
+          "Educating staff on effectively using IT systems and tools.",
       },
     ],
     plans: [
@@ -525,6 +543,213 @@ const services = {
           "<b>Hardware Repair and Maintenance:</b> Full maintenance for all devices.",
           "<b>Network Support:</b> Comprehensive network management.",
           "<b>User Training:</b> Monthly training sessions for staff.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>6500 EUR</span>",
+      },
+    ],
+  },
+  digital_transformation: {
+    number: "07",
+    title: "Digital Transformation Services",
+    slug: "digital-transformation",
+    excerpt:
+      "Consulting on modernising your business with the latest technology.",
+    advantages: [
+      "Integration ",
+      "Analytics",
+      "Management",
+      "Integration ",
+      "Analytics",
+      "Management",
+    ],
+    categoriesTitle: "Instant Digital Transformation Services",
+    categories: [
+      {
+        number: "01",
+        title: "Business Process Reengineering",
+        description:
+          "Analysing and redesigning workflows for greater efficiency.",
+      },
+      {
+        number: "02",
+        title: "Technology Implementation",
+        description:
+          "Deploying cutting-edge technologies to transform your business operations.",
+      },
+      {
+        number: "03",
+        title: "Cloud Integration",
+        description:
+          "Migrating your business processes and data to the cloud for enhanced agility and scalability.",
+      },
+      {
+        number: "04",
+        title: "Data Analytics",
+        description:
+          "Leveraging big data and analytics to drive informed business decisions.",
+      },
+      {
+        number: "05",
+        title: "Customer Experience Enhancement",
+        description:
+          "Using digital tools to improve customer interactions and satisfaction.",
+      },
+      {
+        number: "06",
+        title: "Change Management",
+        description:
+          "Guiding your company through operational changes required for digital transformation.",
+      },
+      {
+        number: "07",
+        title: "Automation Solutions",
+        description:
+          "Implementing automation tools to streamline repetitive tasks and improve productivity.",
+      },
+      {
+        number: "08",
+        title: "Business Cybersecurity",
+        description:
+          "Ensuring robust security measures are in place to protect your digital assets.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Business Process Reengineering:</b> Initial analysis and recommendations.",
+          "<b>Technology Implementation:</b> Basic setup and deployment.",
+          "<b>Cloud Integration:</b> Migration of up to 5 business processes.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>6000 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Business Process Reengineering:</b> Comprehensive analysis and workflow redesign.",
+          "<b>Technology Implementation:</b> Advanced deployment and integration.",
+          "<b>Cloud Integration:</b> Migration of up to 15 business processes.",
+          "<b>Data Analytics:</b> Basic analytics and reporting.",
+          "<b>Customer Experience Enhancement:</b> Implementation of customer interaction tools.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>7500 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Business Process Reengineering:</b> Full analysis and continuous improvement.",
+          "<b>Technology Implementation:</b> Comprehensive deployment with ongoing support.",
+          "<b>Cloud Integration:</b> Migration of unlimited business processes.",
+          "<b>Data Analytics:</b> Advanced analytics with real-time reporting.",
+          "<b>Customer Experience Enhancement:</b> Full suite of customer engagement tools.",
+          "<b>Change Management:</b> Dedicated change management support.",
+          "<b>Automation Solutions:</b> Implementation of advanced automation tools.",
+          "<b>Business Cybersecurity:</b> Enhanced security measures and monitoring.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>9000 EUR</span>",
+      },
+    ],
+  },
+  mobile_remote_networking: {
+    number: "08",
+    title: "Mobile and Remote Networking",
+    slug: "mobile-remote-networking",
+    excerpt: "Solutions for seamless remote and mobile connectivity.",
+    advantages: [
+      "Tools",
+      "Monitoring",
+      "Management",
+      "Tools",
+      "Monitoring",
+      "Management",
+    ],
+    categoriesTitle: "Instant Mobile and Remote Networking Services",
+    categories: [
+      {
+        number: "01",
+        title: "Remote Access Solutions",
+        description:
+          "Secure access to your business network from any location.",
+      },
+      {
+        number: "02",
+        title: "Mobile Device Management",
+        description:
+          "Managing and securing mobile devices used by your employees.",
+      },
+      {
+        number: "03",
+        title: "VPN Setup and Management",
+        description:
+          "Implementing and maintaining Virtual Private Networks for secure remote connections.",
+      },
+      {
+        number: "04",
+        title: "Cloud Networking",
+        description:
+          "Utilising cloud services to facilitate remote work and collaboration.",
+      },
+      {
+        number: "05",
+        title: "Network Security",
+        description:
+          "Protecting remote connections from cyber threats and unauthorized access.",
+      },
+      {
+        number: "06",
+        title: "Collaboration Tools",
+        description:
+          "Providing tools and platforms for remote teamwork and communication.",
+      },
+      {
+        number: "07",
+        title: "Performance Monitoring",
+        description:
+          "Monitoring and optimising the performance of your remote network.",
+      },
+      {
+        number: "08",
+        title: "Technical Support",
+        description:
+          "Offering support for remote and mobile networking issues.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Remote Access Solutions:</b> Setup for up to 10 users.",
+          "<b>VPN Setup and Management:</b> Basic VPN implementation.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>3200 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Remote Access Solutions:</b> Setup for up to 50 users.",
+          "<b>Mobile Device Management:</b> Basic management for up to 50 devices.",
+          "<b>VPN Setup and Management:</b> Advanced VPN implementation and maintenance.",
+          "<b>Cloud Networking:</b> Basic cloud services integration.",
+          "<b>Network Security:</b> Basic security measures for remote connections.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>4800 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Remote Access Solutions:</b> Setup for unlimited users.",
+          "<b>Mobile Device Management:</b> Comprehensive management for all mobile devices.",
+          "<b>VPN Setup and Management:</b> Full VPN services with continuous monitoring.",
+          "<b>Cloud Networking:</b> Advanced cloud services integration.",
+          "<b>Network Security:</b> Enhanced security protocols and monitoring.",
+          "<b>Collaboration Tools:</b> Full suite of collaboration and communication tools.",
+          "<b>Performance Monitoring:</b> Real-time monitoring and optimization.",
           "<b>Support:</b> 24/7 support with priority service.",
         ],
         price: "from <span>6500 EUR</span>",
