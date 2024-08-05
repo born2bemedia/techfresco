@@ -157,7 +157,6 @@ function OrderPopup() {
 
   const initialValues = {
     name: "",
-    lastName: "",
     email: "",
     phone: "",
     company: "",
@@ -244,7 +243,7 @@ function OrderPopup() {
                   <>
                     <Form>
                       <div>
-                        <Field type="hidden" name="service" />
+                        <Field type="hidden" name="service" value={serviceValue} />
                         <Field
                           name="name"
                           type="text"
