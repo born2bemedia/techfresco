@@ -756,6 +756,313 @@ const services = {
       },
     ],
   },
+  managed_it_services: {
+    number: "09",
+    title: "Managed IT Services",
+    slug: "managed-it-services",
+    excerpt: "End-to-end management of your IT infrastructure.",
+    advantages: [
+      "Planning",
+      "Management",
+      "Recovery",
+      "Planning",
+      "Management",
+      "Recovery",
+    ],
+    categoriesTitle: "Instant Managed IT Services",
+    categories: [
+      {
+        number: "01",
+        title: "24/7 Monitoring and Support",
+        description: "Continuous monitoring and support for your IT systems.",
+      },
+      {
+        number: "02",
+        title: "Network Management",
+        description: "Managing and optimising your network infrastructure.",
+      },
+      {
+        number: "03",
+        title: "Server Management",
+        description:
+          "Ensuring your servers are operating efficiently and securely.",
+      },
+      {
+        number: "04",
+        title: "Desktop and Device Management",
+        description: "Managing and maintaining all user devices.",
+      },
+      {
+        number: "05",
+        title: "Data Backup and Recovery",
+        description:
+          "Implementing and managing backup solutions to protect your data.",
+      },
+      {
+        number: "06",
+        title: "Security Management",
+        description:
+          "Providing robust security measures to protect your IT environment.",
+      },
+      {
+        number: "07",
+        title: "Software Management",
+        description:
+          "Installing, updating, and managing all necessary software.",
+      },
+      {
+        number: "08",
+        title: "IT Strategy and Planning",
+        description:
+          "Developing and implementing IT strategies aligned with your business goals.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>24/7 Monitoring and Support:</b> Basic monitoring and support services.",
+          "<b>Network Management:</b> Basic network management for up to 10 devices.",
+          "<b>Server Management:</b> Management of up to 2 servers.",
+          "<b>Data Backup and Recovery:</b> Weekly backups and basic recovery services.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>4600 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>24/7 Monitoring and Support:</b> Comprehensive monitoring and support services.",
+          "<b>Network Management:</b> Advanced network management for up to 50 devices.",
+          "<b>Server Management:</b> Management of up to 10 servers.",
+          "<b>Desktop and Device Management:</b> Support for up to 50 user devices.",
+          "<b>Data Backup and Recovery:</b> Daily backups and advanced recovery services.",
+          "<b>Security Management:</b> Basic security measures and monitoring.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>6900 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>24/7 Monitoring and Support:</b> Full monitoring and support with priority response.",
+          "<b>Network Management:</b> Comprehensive management for unlimited devices.",
+          "<b>Server Management:</b> Management of unlimited servers.",
+          "<b>Desktop and Device Management:</b> Support for all user devices.",
+          "<b>Data Backup and Recovery:</b> Real-time backups and comprehensive recovery services.",
+          "<b>Security Management:</b> Enhanced security protocols and continuous monitoring.",
+          "<b>Software Management:</b> Full software management services.",
+          "<b>IT Strategy and Planning:</b> Dedicated IT strategy development and implementation.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>9900 EUR</span>",
+      },
+    ],
+  },
+  email_services: {
+    number: "10",
+    title: "Email Services",
+    slug: "email-services",
+    excerpt: "Secure and efficient email solutions for your organisation.",
+    advantages: [
+      "Migration",
+      "Recovery",
+      "Protection",
+      "Migration",
+      "Recovery",
+      "Protection",
+    ],
+    categoriesTitle: "Instant Email Services",
+    categories: [
+      {
+        number: "01",
+        title: "Email Setup and Migration",
+        description: "Seamless setup and migration of email accounts and data.",
+      },
+      {
+        number: "02",
+        title: "Email Hosting",
+        description:
+          "Consulting on selection of reliable and secure email hosting solutions.",
+      },
+      {
+        number: "03",
+        title: "Spam and Virus Protection",
+        description:
+          "Advanced filtering to protect against spam and email-borne threats.",
+      },
+      {
+        number: "04",
+        title: "Email Backup and Recovery",
+        description:
+          "Regular backups and easy recovery options for your email data.",
+      },
+      {
+        number: "05",
+        title: "Email Encryption",
+        description: "Ensuring secure communication through encryption.",
+      },
+      {
+        number: "06",
+        title: "Mobile Email Access",
+        description:
+          "Configuration and support for accessing email on mobile devices.",
+      },
+      {
+        number: "07",
+        title: "Email Archiving",
+        description: "Long-term storage and retrieval of email data.",
+      },
+      {
+        number: "08",
+        title: "User Training",
+        description:
+          "Educating staff on best practices for email use and security.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Email Setup and Migration:</b> Setup and migration for up to 10 email accounts.",
+          "<b>Email Hosting:</b> Optimum hosting selection.",
+          "<b>Spam and Virus Protection:</b> Standard filtering.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>3000 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Email Setup and Migration:</b> Setup and migration for up to 50 email accounts.",
+          "<b>Email Hosting:</b> Optimum hosting selection and recommendations.",
+          "<b>Spam and Virus Protection:</b> Advanced filtering and threat protection.",
+          "<b>Email Backup and Recovery:</b> Weekly backups and basic recovery services.",
+          "<b>Email Encryption:</b> Basic encryption services.",
+          "<b>Mobile Email Access:</b> Configuration for up to 50 devices.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>5000 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Email Setup and Migration:</b> Setup and migration for unlimited email accounts.",
+          "<b>Email Hosting:</b> Optimum hosting selection with recommendations and uptime monitoring.",
+          "<b>Spam and Virus Protection:</b> Comprehensive filtering and threat protection.",
+          "<b>Email Backup and Recovery:</b> Daily backups and advanced recovery services.",
+          "<b>Email Encryption:</b> Full encryption services.",
+          "<b>Mobile Email Access:</b> Configuration for unlimited devices.",
+          "<b>Email Archiving:</b> Long-term archiving and retrieval services.",
+          "<b>User Training:</b> Monthly training sessions for staff.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>6200 EUR</span>",
+      },
+    ],
+  },
+  technology_training: {
+    number: "11",
+    title: "Technology Training",
+    slug: "technology-training",
+    excerpt: "Training programs to upskill your team in technology.",
+    advantages: [
+      "Training",
+      "Programs",
+      "Courses",
+      "Training",
+      "Programs",
+      "Courses",
+    ],
+    categoriesTitle: "Instant Technology Training Services",
+    categories: [
+      {
+        number: "01",
+        title: "Software Training",
+        description: "Hands-on training for various software applications.",
+      },
+      {
+        number: "02",
+        title: "Cybersecurity Training",
+        description:
+          "Educating employees on best practices to protect against cyber threats.",
+      },
+      {
+        number: "03",
+        title: "IT Systems Training",
+        description:
+          "Training on the use and management of IT systems and infrastructure.",
+      },
+      {
+        number: "04",
+        title: "Cloud Services Training",
+        description: "Comprehensive guidance on utilising cloud technologies.",
+      },
+      {
+        number: "05",
+        title: "Mobile Device Training",
+        description:
+          "Instruction on the effective use of mobile devices for business.",
+      },
+      {
+        number: "06",
+        title: "Data Analysis Training",
+        description:
+          "Teaching staff how to analyse and interpret data using relevant tools.",
+      },
+      {
+        number: "07",
+        title: "Customised Training Programs",
+        description:
+          "Tailored training solutions to meet specific business requirements.",
+      },
+      {
+        number: "08",
+        title: "Support and Refresher Courses",
+        description:
+          "Continuous learning opportunities to keep skills up-to-date.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Software Training:</b> Basic training for up to 10 employees.",
+          "<b>Cybersecurity Training:</b> Introductory cybersecurity best practices.",
+          "<b>IT Systems Training:</b> Basic IT systems usage and management.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>5500 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Software Training:</b> Intermediate training for up to 25 employees.",
+          "<b>Cybersecurity Training:</b> Comprehensive training with simulated attacks.",
+          "<b>IT Systems Training:</b> Advanced usage and management training.",
+          "<b>Cloud Services Training:</b> Basic cloud technology usage.",
+          "<b>Data Analysis Training:</b> Introductory data analysis skills.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>7200 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Software Training:</b> Advanced training for unlimited employees.",
+          "<b>Cybersecurity Training:</b> Full-spectrum training including phishing simulations and advanced threat protection.",
+          "<b>IT Systems Training:</b> In-depth training on IT systems management.",
+          "<b>Cloud Services Training:</b> Comprehensive cloud technology training.",
+          "<b>Mobile Device Training:</b> Full training on mobile device management.",
+          "<b>Data Analysis Training:</b> Advanced data analysis and interpretation.",
+          "<b>Customised Training Programs:</b> Fully tailored training solutions.",
+          "<b>Ongoing Support and Refresher Courses:</b> Continuous support and regular refresher courses.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>8800 EUR</span>",
+      },
+    ],
+  },
 };
 
 export default services;

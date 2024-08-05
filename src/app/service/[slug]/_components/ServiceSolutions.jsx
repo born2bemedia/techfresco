@@ -46,7 +46,8 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
+    loop: true,
     autoplaySpeed: 3000,
     responsive: [
       {
