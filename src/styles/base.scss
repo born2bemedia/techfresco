@@ -299,6 +299,12 @@ a {
       &.invalid {
         background: rgb(252 214 212);
         border: 1px solid #ee342a;
+        & + span {
+          color: #ee342a;
+          position: absolute;
+          font-size: 11px;
+          line-height: 1;
+        }
       }
       .flag-dropdown {
         border: none !important;
