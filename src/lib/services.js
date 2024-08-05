@@ -345,6 +345,193 @@ const services = {
       },
     ],
   },
+  it_consulting: {
+    number: "05",
+    title: "Information Technology Consulting",
+    slug: "it-consulting",
+    excerpt: "Assessment, management, and transformation of IT infrastructure.",
+    advantages: [
+      "Assessment",
+      "Management",
+      "Transformation",
+    ],
+    categoriesTitle: "Instant IT Consulting Services",
+    categories: [
+      {
+        number: "01",
+        title: "IT Strategy Development",
+        description: "Crafting comprehensive IT strategies that align with your business objectives.",
+      },
+      {
+        number: "02",
+        title: "Technology Assessment",
+        description: "Evaluating your current IT systems and identifying areas for improvement.",
+      },
+      {
+        number: "03",
+        title: "Digital Transformation",
+        description: "Guiding your business through adopting new technologies and digital tools.",
+      },
+      {
+        number: "04",
+        title: "Project Management",
+        description: "Overseeing IT projects from inception to completion, ensuring they meet timelines and budgets.",
+      },
+      {
+        number: "05",
+        title: "Vendor Management",
+        description: "Assisting with selecting and managing IT vendors and service providers.",
+      },
+      {
+        number: "06",
+        title: "Risk Management",
+        description: "Identifying and mitigating IT risks to safeguard your business operations.",
+      },
+      {
+        number: "07",
+        title: "Cost Optimization",
+        description: "Analysis and optimization of your IT budget to ensure cost-effectiveness.",
+      },
+      {
+        number: "08",
+        title: "Compliance and Governance",
+        description: "Ensuring your IT practices comply with industry regulations and standards.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>IT Strategy Development:</b> Initial strategy session and basic plan development.",
+          "<b>Technology Assessment:</b> One-time evaluation of your current IT systems.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>3000 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>IT Strategy Development:</b> Comprehensive strategy planning and ongoing adjustments.",
+          "<b>Technology Assessment:</b> Quarterly evaluations and recommendations.",
+          "<b>Project Management:</b> Basic project oversight and support.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>4300 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>IT Strategy Development:</b> Full strategic planning with continuous improvements.",
+          "<b>Technology Assessment:</b> Monthly evaluations and detailed reports.",
+          "<b>Project Management:</b> Full project management services for multiple projects.",
+          "<b>Vendor Management:</b> Assistance with vendor selection and management.",
+          "<b>Risk Management:</b> Ongoing risk assessments and mitigation strategies.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>5000 EUR</span>",
+      },
+    ],
+  },
+  tech_support: {
+    number: "06",
+    title: "Tech Support",
+    slug: "tech-support",
+    excerpt: "Instant support services for IT issues.",
+    advantages: [
+      "Help Desk Support",
+      "On-Site Support",
+      "Remote Support",
+      "System Setup and Configuration",
+      "Software Troubleshooting",
+      "Hardware Repair and Maintenance",
+      "Network Support",
+      "User Training",
+    ],
+    categoriesTitle: "Instant Tech Support Services",
+    categories: [
+      {
+        number: "01",
+        title: "Help Desk Support",
+        description: "Immediate assistance for IT issues through phone, email, or chat.",
+      },
+      {
+        number: "02",
+        title: "On-Site Support",
+        description: "Professional support for more complex issues that require on-site intervention.",
+      },
+      {
+        number: "03",
+        title: "Remote Support",
+        description: "Quick resolution of IT problems via remote access.",
+      },
+      {
+        number: "04",
+        title: "System Setup and Configuration",
+        description: "Installation and configuration of hardware and software.",
+      },
+      {
+        number: "05",
+        title: "Software Troubleshooting",
+        description: "Identifying and resolving software-related issues.",
+      },
+      {
+        number: "06",
+        title: "Hardware Repair and Maintenance",
+        description: "Fixing and maintaining physical IT equipment.",
+      },
+      {
+        number: "07",
+        title: "Network Support",
+        description: "Managing and troubleshooting network issues to ensure connectivity.",
+      },
+      {
+        number: "08",
+        title: "User Training",
+        description: "Educating staff on effectively using IT systems and tools.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Help Desk Support:</b> 9 AM - 5 PM, Monday to Friday.",
+          "<b>Remote Support:</b> Up to 5 incidents per month.",
+          "<b>System Setup and Configuration:</b> Basic setup for up to 5 devices.",
+          "<b>Software Troubleshooting:</b> Support for up to 5 software issues per month.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>3500 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Help Desk Support:</b> 9 AM - 9 PM, Monday to Saturday.",
+          "<b>Remote Support:</b> Up to 15 incidents per month.",
+          "<b>On-Site Support:</b> 2 visits per month.",
+          "<b>System Setup and Configuration:</b> Advanced setup for up to 10 devices.",
+          "<b>Software Troubleshooting:</b> Support for up to 10 software issues per month.",
+          "<b>Hardware Repair and Maintenance:</b> Basic maintenance for up to 10 devices.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>4800 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Help Desk Support:</b> 24/7 availability.",
+          "<b>Remote Support:</b> Unlimited incidents per month.",
+          "<b>On-Site Support:</b> Unlimited visits per month.",
+          "<b>System Setup and Configuration:</b> Comprehensive setup for unlimited devices.",
+          "<b>Software Troubleshooting:</b> Unlimited software support.",
+          "<b>Hardware Repair and Maintenance:</b> Full maintenance for all devices.",
+          "<b>Network Support:</b> Comprehensive network management.",
+          "<b>User Training:</b> Monthly training sessions for staff.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>6500 EUR</span>",
+      },
+    ],
+  },
 };
 
 export default services;
