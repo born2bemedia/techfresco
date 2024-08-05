@@ -31,7 +31,7 @@ const HomeSolutions = () => {
   const SliderSettings = {
     dots: false,
     arrows: false,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
