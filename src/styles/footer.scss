@@ -19,6 +19,19 @@ footer {
       @media (max-width: rem(992)) {
         flex-direction: column;
       }
+      .soc{
+        display: flex;
+        justify-content: center;
+        gap:rem(16);
+        @media (max-width: rem(992)) {
+          justify-content: flex-start;
+          margin: rem(20) 0;
+          width: 100%;
+        }
+      }
+      p{
+        margin: 0;
+      }
       ul {
         list-style-type: none;
         padding: 0;
@@ -112,6 +125,10 @@ footer {
           gap: rem(8);
           svg {
             margin-top: -rem(3);
+            width: rem(24);
+          }
+          >span{
+            width: calc(100% - rem(24));
           }
         }
       }

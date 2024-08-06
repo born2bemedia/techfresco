@@ -3,6 +3,13 @@ import React, { useEffect, useState } from "react";
 import "@/styles/header.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import PhoneIcon from "@/icons/PhoneIcon";
+import MailIcon from "@/icons/MailIcon";
+import TikTok from "@/icons/social/TikTok";
+import Instagram from "@/icons/social/Instagram";
+import Facebook from "@/icons/social/Facebook";
+import YouTube from "@/icons/social/YouTube";
+import X from "@/icons/social/X";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -22,6 +29,36 @@ const Header = () => {
     <>
       <header>
         <div className="_container">
+          <div className="header-top">
+            <div className="top-contacts">
+              <Link href="tel:+420910921065">
+                <PhoneIcon />
+                <span>+420 910 921 065</span>
+              </Link>
+              <Link href="mailto:info@TechFresco.com">
+                <MailIcon />
+                <span>info@TechFresco.com </span>
+              </Link>
+            </div>
+            <div className="soc">
+              <Link href="#">
+                <TikTok />
+              </Link>
+              <Link href="#">
+                <Instagram />
+              </Link>
+              <Link href="#">
+                <Facebook />
+              </Link>
+              <Link href="#">
+                <YouTube />
+              </Link>
+              <Link href="#">
+                <X />
+              </Link>
+            </div>
+          </div>
+
           <div className="header-row">
             <Link href="/" className="logo">
               <img src="/images/logo-main.svg" alt="logo" />

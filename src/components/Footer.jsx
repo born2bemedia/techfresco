@@ -30,22 +30,25 @@ const Footer = () => {
                   <div>
                     <LocationIcon />
                     <span>
-                      Registered address
+                      Registered address: Revoluăní 1082/8, Nové Mesto, 110 00
+                      Praha 1, Czech Republic
                       <br />
-                      Office address
+                      <br />
+                      Office address: Lomnického 1705/9, 140 00 Praha 4-Nusle,
+                      Czech Republic
                     </span>
                   </div>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="tel:+420910921065">
                     <PhoneIcon />
-                    <span>Phone</span>
+                    <span>+420 910 921 065</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="mailto:info@TechFresco.com">
                     <MailIcon />
-                    <span>Email</span>
+                    <span>info@TechFresco.com </span>
                   </Link>
                 </li>
               </ul>
@@ -83,19 +86,27 @@ const Footer = () => {
                     <Link href="/service/tech-support">Tech support</Link>
                   </li>
                   <li>
-                    <Link href="/service/digital-transformation">Digital transformation</Link>
+                    <Link href="/service/digital-transformation">
+                      Digital transformation
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/service/mobile-remote-networking">Mobile and remote networking</Link>
+                    <Link href="/service/mobile-remote-networking">
+                      Mobile and remote networking
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/service/managed-it-services">Managed IT services</Link>
+                    <Link href="/service/managed-it-services">
+                      Managed IT services
+                    </Link>
                   </li>
                   <li>
                     <Link href="/service/email-services">Email services</Link>
                   </li>
                   <li>
-                    <Link href="/service/technology-training">Technology training</Link>
+                    <Link href="/service/technology-training">
+                      Technology training
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -142,6 +153,23 @@ const Footer = () => {
               <Link href="#">Refund Policy</Link>
             </li>
           </ul>
+          <div className="soc">
+            <Link href="#">
+              <TikTok />
+            </Link>
+            <Link href="#">
+              <Instagram />
+            </Link>
+            <Link href="#">
+              <Facebook />
+            </Link>
+            <Link href="#">
+              <YouTube />
+            </Link>
+            <Link href="#">
+              <X />
+            </Link>
+          </div>
           <p>© {currentYear} Lenas Company s.r.o. All Rights Reserved.</p>
         </div>
       </div>
