@@ -46,9 +46,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="mailto:info@TechFresco.com">
+                  <Link href="mailto:info@techfresco.com">
                     <MailIcon />
-                    <span>info@TechFresco.com </span>
+                    <span>info@techfresco.com </span>
                   </Link>
                 </li>
               </ul>

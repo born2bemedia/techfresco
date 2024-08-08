@@ -35,9 +35,9 @@ const Header = () => {
                 <PhoneIcon />
                 <span>+420 910 921 065</span>
               </Link>
-              <Link href="mailto:info@TechFresco.com">
+              <Link href="mailto:info@techfresco.com">
                 <MailIcon />
-                <span>info@TechFresco.com </span>
+                <span>info@techfresco.com </span>
               </Link>
             </div>
             <div className="soc">
