@@ -1063,6 +1063,107 @@ const services = {
       },
     ],
   },
+  backup_solutions: {
+    number: "12",
+    title: "Backup Solutions",
+    slug: "backup-solutions",
+    excerpt: "Selecting and setting  reliable data backup and recovery services.",
+    advantages: [
+      "Data Restoration",
+      "Monitoring",
+      "Backup Automation",
+      "Data Restoration",
+      "Monitoring",
+      "Backup Automation",
+      "Data Restoration",
+      "Monitoring",
+      "Backup Automation",
+    ],
+    categoriesTitle: "Instant Backup Services",
+    categories: [
+      {
+        number: "01",
+        title: "Automated Backups",
+        description: "Scheduled and automatic backups of your data to prevent loss.",
+      },
+      {
+        number: "02",
+        title: "Cloud Backup",
+        description: "Secure cloud storage solutions for your data.",
+      },
+      {
+        number: "03",
+        title: "On-Premises Backup",
+        description: "Local backup solutions for rapid data recovery.",
+      },
+      {
+        number: "04",
+        title: "Disaster Recovery Planning",
+        description: "Strategies for quick recovery from data loss or system failures.",
+      },
+      {
+        number: "05",
+        title: "Data Archiving",
+        description: "Long-term storage and management of historical data.",
+      },
+      {
+        number: "06",
+        title: "Incremental Backups",
+        description: "Efficient backup solutions that only save changes made since the last backup.",
+      },
+      {
+        number: "07",
+        title: "Backup Monitoring",
+        description: "Continuous monitoring of backups to ensure correct functioning.",
+      },
+      {
+        number: "08",
+        title: "Data Restoration",
+        description: "Quick and reliable restoration of data when needed.",
+      },
+    ],
+    plans: [
+      {
+        planName: "Basic Plan",
+        features: [
+          "<b>Automated Backups:</b> Daily backups for up to 500 GB of data.",
+          "<b>Cloud Backup:</b> Selection of reliable cloud storage.",
+          "<b>On-Premises Backup:</b> Local backup for up to 5 servers.",
+          "<b>Data Restoration:</b> Basic data restoration support.",
+          "<b>Support:</b> Business hours support (9 AM - 5 PM).",
+        ],
+        price: "from <span>4000 EUR</span>",
+      },
+      {
+        planName: "Standard Plan",
+        features: [
+          "<b>Automated Backups:</b> Daily backups for up to 2 TB of data.",
+          "<b>Cloud Backup:</b> Selection of a cloud storage with 99.99% uptime.",
+          "<b>On-Premises Backup:</b> Local backup for up to 15 servers.",
+          "<b>Disaster Recovery Planning:</b> Basic disaster recovery strategy and implementation.",
+          "<b>Incremental Backups:</b> Efficient backup for faster data storage.",
+          "<b>Data Restoration:</b> Advanced data restoration support.",
+          "<b>Support:</b> Extended support (9 AM - 9 PM).",
+        ],
+        price: "from <span>7000 EUR</span>",
+      },
+      {
+        planName: "Premium Plan",
+        features: [
+          "<b>Automated Backups:</b> Real-time backups for unlimited data.",
+          "<b>Cloud Backup:</b> Selection of a premium cloud storage with 100% uptime SLA.",
+          "<b>On-Premises Backup:</b> Local backup for unlimited servers.",
+          "<b>Disaster Recovery Planning:</b> Comprehensive disaster recovery strategy with priority response.",
+          "<b>Incremental Backups:</b> Optimised incremental backups for maximum efficiency.",
+          "<b>Data Archiving:</b> Long-term archiving solutions.",
+          "<b>Backup Monitoring:</b> Continuous monitoring with real-time alerts.",
+          "<b>Data Restoration:</b> Priority data restoration with minimal downtime.",
+          "<b>Support:</b> 24/7 support with priority service.",
+        ],
+        price: "from <span>8500 EUR</span>",
+      },
+    ],
+  },
 };
 
 export default services;
