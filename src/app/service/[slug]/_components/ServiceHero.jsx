@@ -33,7 +33,7 @@ const ServiceHero = ({ id, title, marqueeTexts, serviceSlug }) => {
             <Marquee texts={marqueeTexts} />
           </div>
           <div className="col-02">
-            <Image fill src={`/images/services/${serviceSlug}.png`} />
+            <Image quality={90} fill src={`/images/services/${serviceSlug}.png`} />
           </div>
         </div>
       </div>
