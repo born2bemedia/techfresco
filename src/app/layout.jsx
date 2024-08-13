@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Preloader from "@/components/Preloader";
 import { PopupsProvider } from "@/context/PopupsContext";
 import RequestPopup from "@/components/RequestPopup";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={outfit.className}>
+        <GoogleAnalytics gaId="G-61E1Q9SSHK" />
         <PopupsProvider>
           <Preloader />
           <Header />
