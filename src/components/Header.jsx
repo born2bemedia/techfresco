@@ -41,19 +41,13 @@ const Header = () => {
               </Link>
             </div>
             <div className="soc">
-              <Link href="#">
-                <TikTok />
-              </Link>
-              <Link href="#">
-                <Instagram />
-              </Link>
-              <Link href="#">
+              <Link href="https://www.facebook.com/techfresco/">
                 <Facebook />
               </Link>
-              <Link href="#">
-                <YouTube />
+              <Link href="https://www.instagram.com/techfresco/">
+                <Instagram />
               </Link>
-              <Link href="#">
+              <Link href="https://x.com/techfresco_com">
                 <X />
               </Link>
             </div>
