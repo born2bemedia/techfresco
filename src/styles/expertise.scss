@@ -82,6 +82,7 @@
     margin: 0 0 rem(64) 0;
     color: #21282b;
     @media (max-width: rem(992)) {
+      margin: 0;
     }
   }
   h1 {
@@ -113,107 +114,114 @@
     margin: rem(80) 0;
   }
 
-  &__top {
+  &__body {
     display: flex;
-    .left {
-      background: #fff;
-      border-radius: rem(16) rem(16) 0 0;
-      padding: rem(40) rem(88) rem(16) rem(88);
-      width: 50%;
-      position: relative;
+    gap: rem(16);
+    flex-wrap: wrap;
+    @media (max-width: rem(992)) {
+    }
+
+    .col-01 {
+      width: calc(50% - rem(8));
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
       @media (max-width: rem(992)) {
-        padding: rem(80) rem(24) rem(16) rem(24);
         width: 100%;
       }
-      &::before {
-        content: "";
-        width: rem(16);
-        height: rem(16);
-        display: block;
-        right: -rem(16);
-        bottom: 0;
-        position: absolute;
-        z-index: 0;
-        background: #fff;
+      > .head {
+        background: #21282b;
+        border-radius: rem(16);
+        padding: rem(40);
         @media (max-width: rem(992)) {
-          display: none;
+          padding: rem(24);
         }
-      }
-      h2 {
-        color: #21282b;
-        font-size: rem(40);
-        font-weight: 500;
-        line-height: 1.2;
-        text-align: left;
-        margin: 0 0 rem(8) 0;
-      }
-      p {
-        color: #878787;
-        font-size: rem(16);
-        font-weight: 400;
-        line-height: 1.2;
-        text-align: left;
-        margin: 0;
-      }
-    }
-    .right {
-      padding: rem(16) 0 rem(16) rem(16);
-      border-radius: 0 0 0 rem(16);
-      position: relative;
-      z-index: 1;
-      background: #f8f8f8;
-      width: 50%;
-      @media (max-width: rem(992)) {
-        display: none;
-      }
-      img {
-        width: 100% !important;
-      }
-    }
-  }
-
-  &__body {
-    padding: rem(70) 0 0 0;
-    border-radius: 0 rem(16) rem(16) rem(16);
-    margin-bottom: rem(16);
-    background: #fff;
-    position: relative;
-    @media (max-width: rem(992)) {
-      border-radius: 0 0 rem(16) rem(16);
-    }
-    .marquee {
-      width: 100%;
-      position: absolute;
-      top: rem(40);
-      left: 0;
-      overflow: hidden;
-      box-sizing: border-box;
-      @media (max-width: rem(992)) {
-        //display: none;
-        top: rem(20);
-      }
-      .track {
-        display: flex;
-        align-items: center;
-        gap: rem(5);
-        width: rem(2200);
-        .text {
-          font-size: rem(14);
+        h2 {
+          color: #ffffff;
+          font-size: rem(40);
+          font-weight: 500;
+          line-height: 1.2;
+          text-align: left;
+          margin: 0 0 rem(16) 0;
+          @media (max-width: rem(992)) {
+            font-size: rem(32);
+          }
+        }
+        p {
+          color: #878787;
+          font-size: rem(16);
           font-weight: 400;
           line-height: 1.2;
-          text-align: center;
-          color: #bebebe;
-          max-width: unset;
+          text-align: left;
+          margin: 0;
         }
-        .circle {
-          width: rem(3);
-          height: rem(3);
-          border-radius: 50%;
-          background: #bebebe;
-          display: block;
+      }
+      .image {
+        display: block;
+        flex-grow: 1;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: rem(16);
+        background-image: url(/images/expertise/whyExpertise.webp);
+      }
+    }
+    .col-02 {
+      width: calc(50% - rem(8));
+      background-color: #ffffff;
+      border-radius: rem(16);
+      padding: rem(40);
+      display: flex;
+      flex-direction: column;
+      gap: rem(40);
+      @media (max-width: rem(992)) {
+        width: 100%;
+        padding: rem(24);
+      }
+      > div {
+        display: flex;
+        gap: rem(24);
+
+        align-items: center;
+        height: 100%;
+        @media (max-width: rem(992)) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        > div {
+          width: calc(100% - rem(124));
+          @media (max-width: rem(992)) {
+            width: 100%;
+          }
+          h3 {
+            color: #21282b;
+            font-size: rem(24);
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0 0 rem(8) 0;
+          }
+          p {
+            color: #878787;
+            font-size: rem(16);
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: left;
+            margin: 0;
+          }
+        }
+        .value {
+          color: #ee342a;
+          font-size: rem(40);
+          font-weight: 400;
+          line-height: 1.2;
+          text-align: left;
+          width: rem(100);
         }
       }
     }
+
     .row {
       padding: 0 rem(88) rem(88) rem(88);
       display: flex;
@@ -301,6 +309,7 @@
         margin: 0;
         color: #fff;
         @media (max-width: rem(992)) {
+          text-align: center;
           br {
             display: none;
           }

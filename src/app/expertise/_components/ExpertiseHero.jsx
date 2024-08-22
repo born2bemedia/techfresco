@@ -51,7 +51,7 @@ const ExpertiseHero = () => {
             <Marquee texts={marqueeTexts} />
           </div>
           <div className="col-02">
-            <Image fill src="/images/default.png" />
+            <Image fill src="/images/expertise/expertiseHero.png" />
           </div>
         </div>
       </div>
