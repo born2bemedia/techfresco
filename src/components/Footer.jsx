@@ -114,7 +114,7 @@ const Footer = () => {
                 <h3>Company</h3>
                 <ul>
                   <li>
-                    <Link href="#">Expertise</Link>
+                    <Link href="/expertise">Expertise</Link>
                   </li>
                   <li>
                     <Link href="#">Career</Link>
@@ -123,13 +123,7 @@ const Footer = () => {
                     <Link href="#">Insights</Link>
                   </li>
                   <li>
-                    <Link href="#">Client Area</Link>
-                  </li>
-                  <li>
                     <Link href="#">Contact</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Get Support</Link>
                   </li>
                 </ul>
               </div>
