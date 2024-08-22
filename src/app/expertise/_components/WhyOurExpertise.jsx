@@ -36,7 +36,7 @@ const WhyOurExpertise = () => {
             </motion.p>
           </div>
           <div className="right">
-            <Image src="/images/home/howItWorks.png" width={690} height={186} />
+            <Image src="/images/default.png" width={690} height={186} style={{borderRadius: "16px"}} />
           </div>
         </div>
         <div className="why-expertise__body">

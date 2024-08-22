@@ -101,7 +101,7 @@ const Header = () => {
               <Link href="/expertise">Expertise</Link>
               <Link href="#">Insights</Link>
               <Link href="#">Career</Link>
-              <Link href="#">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </nav>
 
             <RequestButton className={"bordered-button"} text={"Get Support"} />
