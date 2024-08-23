@@ -21,7 +21,7 @@ const ContactHero = () => {
             </motion.h1>
           </div>
           <div className="col-02">
-            <Image fill src="/images/default.png" />
+            <Image fill src="/images/contact/contactHero.png" />
           </div>
         </div>
       </div>

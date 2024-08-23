@@ -8,9 +8,9 @@ import Link from "next/link";
 
 const ContactWrap = () => {
   return (
-    <section className="contact-block">
+    <section className="contact-wrap">
       <div className="_container">
-        <div className="contact-block__body">
+        <div className="contact-wrap__body">
           <div className="col-01">
             <motion.h2
               initial="hidden"
