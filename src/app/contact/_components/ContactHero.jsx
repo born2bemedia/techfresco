@@ -17,7 +17,8 @@ const ContactHero = () => {
               viewport={{ once: true }}
               variants={fadeInUp}
             >
-              Contact Tech Fresco
+              Contact <br />
+              Tech Fresco
             </motion.h1>
           </div>
           <div className="col-02">
