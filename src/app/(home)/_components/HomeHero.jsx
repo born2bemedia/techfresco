@@ -57,9 +57,7 @@ const HomeHero = () => {
                 className={"black-button"}
                 text={"Get Assistance"}
               />
-              <Link href="#" className="bordered-button red">
-                Explore Services
-              </Link>
+              
             </motion.div>
             <Marquee texts={marqueeTexts} />
           </div>

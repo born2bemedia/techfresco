@@ -201,7 +201,7 @@ const OurInsights = () => {
             className="more-insights"
           >
             <h3>More IT News and Insights</h3>
-            <Link className="red-button" href="#">
+            <Link className="red-button" href="/insights">
               <span>Explore</span>
               <img src="/images/whiteArrow.svg" />
             </Link>
