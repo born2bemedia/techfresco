@@ -256,6 +256,12 @@ a {
 }
 
 .request-form {
+  &.job-form {
+    h2 {
+      margin-bottom: rem(32) !important;
+    }
+  }
+
   .success-message {
     display: flex;
     align-items: center;
@@ -280,6 +286,24 @@ a {
 
     button {
       width: 100%;
+    }
+
+    .file-wrap {
+      .upload-custom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #878787;
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        background: #ffffff;
+        border: 1px dashed #878787;
+        border-radius: rem(16);
+        height: rem(70);
+      }
     }
 
     .react-tel-input {
@@ -465,6 +489,7 @@ a {
       right: 40px;
       top: 40px;
       cursor: pointer;
+      z-index: 1;
       @media (max-width: rem(992)) {
         top: 24px;
         right: 24px;
@@ -518,6 +543,22 @@ a {
       transition: all 0.5s;
     }
   }
+
+  &.job-popup {
+    .popup-inner {
+      overflow: hidden;
+      > div {
+        height: 100%;
+        overflow-y: auto;
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none;
+        &:-webkit-scrollbar {
+          display: none; /* Safari and Chrome */
+        }
+      }
+    }
+  }
+
   .overlay {
     position: absolute;
     left: 0;
@@ -556,9 +597,10 @@ a {
     }
     .popup-close {
       position: absolute;
-      right: 50px;
+      right: 40px;
       top: 30px;
       cursor: pointer;
+      z-index: 1;
       @media (max-width: rem(992)) {
         top: 24px;
         right: 24px;

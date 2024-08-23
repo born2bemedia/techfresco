@@ -1,0 +1,239 @@
+@import "mixin";
+
+.career-hero {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(80);
+  }
+  &__body {
+    display: flex;
+    gap: rem(16);
+    align-items: stretch;
+    @media (max-width: rem(992)) {
+      flex-direction: column;
+    }
+    .col-01 {
+      padding: rem(90) rem(90);
+      background: #fff;
+      border-radius: rem(16);
+      width: calc(50% - rem(8));
+      position: relative;
+
+      @media (max-width: rem(992)) {
+        width: 100%;
+        padding: rem(48) rem(24) rem(24) rem(24);
+      }
+      h3 {
+        font-size: rem(16);
+        font-weight: 300;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0;
+        color: #21282b;
+        @media (max-width: rem(992)) {
+          margin: 0;
+        }
+      }
+      h1 {
+        color: #21282b;
+        font-size: rem(64);
+        font-weight: 600;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0 0 rem(20) 0;
+        @media (max-width: rem(992)) {
+          font-size: rem(32);
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+    .col-02 {
+      width: calc(50% - rem(8));
+      height: rem(434);
+      position: relative;
+      border-radius: rem(16);
+      overflow: hidden;
+      @media (max-width: rem(992)) {
+        width: 100%;
+        height: rem(170);
+        img {
+          height: auto !important;
+          top: 50% !important;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
+
+.career-second {
+  margin: rem(100) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(70) 0;
+  }
+  &__body {
+    display: flex;
+    gap: rem(32);
+    flex-wrap: wrap;
+    .col-01 {
+      width: rem(328);
+      border-radius: rem(16);
+      padding: rem(40);
+      display: flex;
+      align-items: flex-end;
+      background-image: url(/images/career/careerSecond.png);
+      background-position: center;
+      background-size: cover;
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      p {
+        color: #fff;
+        font-size: rem(20);
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: left;
+      }
+    }
+    .col-02 {
+      display: flex;
+      flex-direction: column;
+      gap: rem(64);
+      width: calc(100% - rem(360));
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      > div {
+        h2 {
+          color: #21282b;
+          font-size: rem(40);
+          font-weight: 500;
+          line-height: 1.2;
+          text-align: left;
+          margin: 0 0 rem(32) 0;
+        }
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: rem(16);
+          > div {
+            width: calc(33.33% - rem(12));
+            overflow: hidden;
+            height: 100% !important;
+            background: #ffffff;
+            padding: rem(32);
+            border-radius: rem(16);
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            transition: all 0.5s;
+            @media (max-width: rem(992)) {
+              width: 100%;
+            }
+            &:last-child {
+              background: #21282b;
+              h3 {
+                color: #ffffff;
+              }
+              p {
+                color: #878787;
+              }
+            }
+            .number {
+              color: #ee342a;
+              font-size: rem(16);
+              font-weight: 700;
+              line-height: 1;
+            }
+            h3 {
+              color: #21282b;
+              font-size: rem(24);
+              font-weight: 500;
+              line-height: 1.2;
+              text-align: left;
+              margin: rem(16) 0 rem(8) 0;
+              @media (max-width: rem(992)) {
+                color: #fff;
+              }
+            }
+            p {
+              color: #878787;
+              font-size: rem(16);
+              font-weight: 400;
+              line-height: 1.2;
+              text-align: left;
+              margin: 0;
+              @media (max-width: rem(992)) {
+                color: #878787;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.career-banner {
+  margin: rem(100) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(80) 0;
+  }
+  &__banner {
+    background-color: #21282b;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/images/services/pricingBack.png);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(80) rem(90);
+    border-radius: rem(16);
+    gap: rem(48);
+    margin-top: rem(80);
+    @media (max-width: rem(992)) {
+      flex-direction: column;
+      padding: rem(80) rem(24);
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      width: 75%;
+      gap: rem(16);
+      @media (max-width: rem(992)) {
+        width: 100%;
+      }
+      h2 {
+        color: #fff;
+        font-size: rem(36);
+        font-weight: 500;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0;
+
+        @media (max-width: rem(992)) {
+          width: 100%;
+          font-size: rem(30);
+          text-align: center;
+        }
+      }
+      p {
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+        margin: 0;
+        color: #fff;
+        @media (max-width: rem(992)) {
+          text-align: center;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

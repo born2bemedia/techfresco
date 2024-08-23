@@ -40,7 +40,7 @@ export async function POST(request) {
     const mailOptionsClient = {
       from: '"Tech Fresco" <noreply@techfresco.com>', // Sender address
       to: email, // Client's email
-      subject: "Tech Fresco Job Application Received",
+      subject: `Tech Fresco: ${service} Request Received`,
       html: `
        <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
   <thead>
