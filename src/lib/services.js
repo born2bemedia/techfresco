@@ -4,6 +4,9 @@ const services = {
     title: "Cloud Services",
     slug: "cloud-services",
     excerpt: "Selecting scalable cloud solutions for your business needs.",
+    seo_title: "Cloud Services",
+    seo_description:
+      "Discover our Cloud Services, which include cloud migration, infrastructure management, security, and optimization. Improve efficiency and scalability with tailored cloud solutions.",
     advantages: [
       "Migration",
       "Management",
@@ -81,6 +84,9 @@ const services = {
     slug: "network-security",
     excerpt:
       "Protecting your network from threats, breaches, occasional and intentional data leaks.",
+    seo_title: "Network Security Services",
+    seo_description:
+      "Explore our Network Security Services, including firewall protection, intrusion detection, and data encryption. Safeguard your business with advanced security solutions.",
     advantages: [
       "Firewall Protection",
       "IDPS",
@@ -178,6 +184,9 @@ const services = {
     slug: "hardware-help",
     excerpt:
       "Assistance with installation, maintenance, and repair of hardware.",
+    seo_title: "Hardware Support Services",
+    seo_description:
+      "Get professional Hardware Support Services, including installation, troubleshooting, and maintenance, to ensure your IT hardware operates smoothly and efficiently.",
     advantages: [
       "Installation",
       "Maintenance",
@@ -255,6 +264,9 @@ const services = {
     slug: "cybersecurity",
     excerpt:
       "Consulting and implementation of security measures to safeguard your data.",
+    seo_title: "Cybersecurity Services",
+    seo_description:
+      "Explore our Cybersecurity Services, including threat detection, data protection, and incident response. Secure your business against cyber threats with our expert solutions.",
     advantages: [
       "Threat Detection",
       "Antivirus Solutions",
@@ -351,6 +363,9 @@ const services = {
     slug: "it-consulting",
     excerpt:
       "Expert advice to optimise your IT strategy, infrastructure and local solutions.",
+    seo_title: "Information Technology Consulting",
+    seo_description:
+      "Discover our Information Technology Consulting services, offering strategic IT solutions to align technology with your business goals. Optimise your IT infrastructure with expert guidance.",
     advantages: [
       "Assessment",
       "Management",
@@ -452,6 +467,9 @@ const services = {
     title: "Tech Support",
     slug: "tech-support",
     excerpt: "Responsive support for all your technical issues.",
+    seo_title: "Tech Support Services",
+    seo_description:
+      "Explore our Tech Support Services, providing expert IT support, troubleshooting, and maintenance. Ensure your business runs smoothly with reliable technical assistance.",
     advantages: [
       "Remote Assistance",
       "Configuration",
@@ -555,6 +573,9 @@ const services = {
     slug: "digital-transformation",
     excerpt:
       "Consulting on modernising your business with the latest technology.",
+    seo_title: "Digital Transformation Services",
+    seo_description:
+      "Discover our Digital Transformation Services, helping businesses modernise operations, integrate new technologies, and drive innovation. Achieve growth through digital transformation.",
     advantages: [
       "Integration ",
       "Analytics",
@@ -659,6 +680,9 @@ const services = {
     title: "Mobile and Remote Networking",
     slug: "mobile-remote-networking",
     excerpt: "Solutions for seamless remote and mobile connectivity.",
+    seo_title: "Mobile and Remote Networking Services",
+    seo_description:
+      "Explore our Mobile and Remote Networking Services, enabling secure and efficient connectivity for your remote workforce. Enhance mobility and remote access for your business.",
     advantages: [
       "Tools",
       "Monitoring",
@@ -761,6 +785,9 @@ const services = {
     title: "Managed IT Services",
     slug: "managed-it-services",
     excerpt: "End-to-end management of your IT infrastructure.",
+    seo_title: "Managed IT Services",
+    seo_description:
+      "Discover our managed IT services, which provide ongoing IT management, monitoring, and support. Ensure your business operates smoothly with our proactive IT solutions.",
     advantages: [
       "Planning",
       "Management",
@@ -864,6 +891,9 @@ const services = {
     title: "Email Services",
     slug: "email-services",
     excerpt: "Secure and efficient email solutions for your organisation.",
+    seo_title: "Email Services",
+    seo_description:
+      "Explore our Email Services, including professional email setup, management, and security. Ensure reliable and secure communication for your business.",
     advantages: [
       "Migration",
       "Recovery",
@@ -966,6 +996,9 @@ const services = {
     title: "Technology Training",
     slug: "technology-training",
     excerpt: "Training programs to upskill your team in technology.",
+    seo_title: "Technology Training Services for Businesses",
+    seo_description:
+      "Enhance your team's skills with our Technology Training services. Customised training solutions for businesses to improve IT proficiency and efficiency.",
     advantages: [
       "Training",
       "Programs",
@@ -1067,7 +1100,11 @@ const services = {
     number: "12",
     title: "Backup Solutions",
     slug: "backup-solutions",
-    excerpt: "Selecting and setting  reliable data backup and recovery services.",
+    excerpt:
+      "Selecting and setting  reliable data backup and recovery services.",
+    seo_title: "Backup Solutions for Businesses",
+    seo_description:
+      "Protect your business data with Tech Fresco's Backup Solutions. Reliable and secure backup services to ensure data integrity and disaster recovery.",
     advantages: [
       "Data Restoration",
       "Monitoring",
@@ -1084,7 +1121,8 @@ const services = {
       {
         number: "01",
         title: "Automated Backups",
-        description: "Scheduled and automatic backups of your data to prevent loss.",
+        description:
+          "Scheduled and automatic backups of your data to prevent loss.",
       },
       {
         number: "02",
@@ -1099,7 +1137,8 @@ const services = {
       {
         number: "04",
         title: "Disaster Recovery Planning",
-        description: "Strategies for quick recovery from data loss or system failures.",
+        description:
+          "Strategies for quick recovery from data loss or system failures.",
       },
       {
         number: "05",
@@ -1109,12 +1148,14 @@ const services = {
       {
         number: "06",
         title: "Incremental Backups",
-        description: "Efficient backup solutions that only save changes made since the last backup.",
+        description:
+          "Efficient backup solutions that only save changes made since the last backup.",
       },
       {
         number: "07",
         title: "Backup Monitoring",
-        description: "Continuous monitoring of backups to ensure correct functioning.",
+        description:
+          "Continuous monitoring of backups to ensure correct functioning.",
       },
       {
         number: "08",

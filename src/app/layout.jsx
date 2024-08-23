@@ -12,7 +12,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata = {
   title: {
     default: "Leading IT Services & Consulting | Tech Fresco",
-    template: "%s",
+    template: "%s | Tech Fresco",
   },
   description:
     "Explore expert IT services and consulting that help businesses drive growth, enhance security, and achieve digital transformation. Discover tailored solutions for your business IT needs.",
@@ -20,7 +20,7 @@ export const metadata = {
     title: {
       default:
         "Leading IT Services & Consulting | Tech Fresco",
-      template: "%s",
+      template: "%s | Tech Fresco",
     },
     description:
       "Explore expert IT services and consulting that help businesses drive growth, enhance security, and achieve digital transformation. Discover tailored solutions for your business IT needs.",

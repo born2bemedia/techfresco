@@ -115,6 +115,23 @@
 
   &.insights {
     .home-solutions__body {
+
+      .slick-slider {
+        .slick-list {
+          .slick-track {
+            .slick-slide {
+              > div {
+                > div {
+                  p{
+                    color: #EE342A;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
       .solution-top {
         align-items: flex-end;
         @media (max-width: rem(992)) {

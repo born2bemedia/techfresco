@@ -16,34 +16,31 @@ const OurInsights = () => {
 
   const insights = [
     {
-      title: "Article 1",
-      excerpt: "Preview",
-      thumbnail: "/images/home/thumb.png",
-      link: "#",
+      title: "Report: Enhancing Operational Efficiency through Cloud Solutions",
+      category: "Market Research",
+      thumbnail: "/images/insights/article1.png",
+      link: "/insights/report-enhancing-operational-efficiency-through-cloud-solutions",
     },
     {
-      title: "Article 2",
-      excerpt: "Preview",
-      thumbnail: "/images/home/thumb.png",
-      link: "#",
+      title:
+        "Report: The Impact of Advanced Cybersecurity on Business Continuity",
+      category: "Market Research",
+      thumbnail: "/images/insights/article2.png",
+      link: "/insights/report-the-impact-of-advanced-cybersecurity-on-business-continuity",
     },
     {
-      title: "Article 3",
-      excerpt: "Preview",
-      thumbnail: "/images/home/thumb.png",
-      link: "#",
+      title:
+        "Surge in Cybersecurity Spending as Businesses Aim to Reduce Downtime",
+      category: "Market News",
+      thumbnail: "/images/insights/article3.png",
+      link: "/insights/surge-in-cybersecurity-spending-as-businesses-aim-to-reduce-downtime",
     },
     {
-      title: "Article 4",
-      excerpt: "Preview",
-      thumbnail: "/images/home/thumb.png",
-      link: "#",
-    },
-    {
-      title: "Article 5",
-      excerpt: "Preview",
-      thumbnail: "/images/home/thumb.png",
-      link: "#",
+      title:
+        "Rise in Cloud Adoption Driving Significant Cost Savings for Businesses",
+      category: "Market News",
+      thumbnail: "/images/insights/article4.png",
+      link: "/insights/rise-in-cloud-adoption-driving-significant-cost-savings-for-businesses",
     },
   ];
 
@@ -171,8 +168,9 @@ const OurInsights = () => {
                   onMouseMove={(e) => handleMouseMove(e, index)}
                 >
                   <img src={insight.thumbnail} />
+                  <p>{insight.category}</p>
                   <h3>{insight.title}</h3>
-                  <p>{insight.excerpt}</p>
+
                   <Link
                     className="red-button"
                     href={insight.link}

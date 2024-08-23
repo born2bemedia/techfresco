@@ -120,7 +120,7 @@ const Footer = () => {
                     <Link href="#">Career</Link>
                   </li>
                   <li>
-                    <Link href="#">Insights</Link>
+                    <Link href="/insights">Insights</Link>
                   </li>
                   <li>
                     <Link href="/contact">Contact</Link>
@@ -135,16 +135,16 @@ const Footer = () => {
         <div className="_container">
           <ul>
             <li>
-              <Link href="#">Terms of Use</Link>
+              <Link href="/terms-and-conditions">Terms and Conditions</Link>
             </li>
             <li>
-              <Link href="#">Privacy Policy</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
             </li>
             <li>
-              <Link href="#">Cookie Policy</Link>
+              <Link href="/cookie-policy">Cookie Policy</Link>
             </li>
             <li>
-              <Link href="#">Refund Policy</Link>
+              <Link href="/refund-policy">Refund Policy</Link>
             </li>
           </ul>
           <div className="soc">

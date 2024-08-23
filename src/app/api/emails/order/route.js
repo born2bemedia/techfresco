@@ -40,13 +40,13 @@ export async function POST(request) {
     const mailOptionsClient = {
       from: '"Tech Fresco" <noreply@techfresco.com>', // Sender address
       to: email, // Client's email
-      subject: "Your request has been received",
+      subject: "Tech Fresco Job Application Received",
       html: `
-        <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
+       <table width="640" style="border-collapse: collapse; margin: 0 auto; font-style: sans-serif">
   <thead>
     <tr>
       <td>
-        <img style="width: 100%" src="https://cms.techfresco.com/wp-content/uploads/2024/07/email-header.png" />
+        <img style="width: 100%" src="https://techfresco.com/images/email_header.png" />
       </td>
     </tr>
   </thead>
@@ -54,38 +54,23 @@ export async function POST(request) {
     <tr>
       <td style="padding: 40px">
         <h2 style="text-align: left; font-size: 20px;color:#202020;">Dear ${name},</h2>
-        <p style="text-align: left; font-size: 16px;color:#202020;"> Thank you for reaching out to Modellist Digital! We have successfully received your request for our services/products. Our team is currently reviewing your details and will get back to you shortly with the best options. </p>
-        <p style="text-align: left; font-size: 16px;font-weight: 600;color:#202020;"> What to Expect Next: </p>
-        <ul style="margin:0;padding: 0 0 0 18px;color:#202020;">
-          <li style="text-align: left; font-size: 16px;color:#202020;">A member of our team will contact you soon to discuss your needs and provide a tailored solution.</li>
-          <li style="text-align: left; font-size: 16px;color:#202020;">If you have any immediate questions, feel free to reply to this email.</li>
-        </ul>
-        <p style="text-align: left; font-size: 16px;color:#202020;"> Thank you for choosing us! </p>
-        <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best, <br /> The Modellist Digital Team </h2>
+        <p style="text-align: left; font-size: 16px;color:#202020;">Thank you for submitting your request for ${service} with Tech Fresco.</p>
+
+        <p style="text-align: left; font-size: 16px;color:#202020;">We have received your request and the details you provided. Our team is currently reviewing your submission and will reach out shortly to discuss your needs and provide a tailored solution.
+        </p>
+        <p style="text-align: left; font-size: 16px;color:#202020;">
+          If you have any immediate questions or additional information to share, please feel free to contact us at <a href="mailto:info@techfresco.com" style="color: #EE342A;text-decoration: none;">info@techfresco.com</a>.
+        </p>
+        <p style="text-align: left; font-size: 16px;color:#202020;">
+          Thank you for choosing Tech Fresco. We look forward to assisting you!
+        </p>
+        <h2 style="text-align: left; font-size: 20px;color:#202020;"> Best regards,<br>The Tech Fresco Team</h2>
       </td>
     </tr>
   </tbody>
   <tfoot >
-				<td style="padding: 12px 40px;background: #0C0C0C;background-size:cover;background-image:url(https://cms.techfresco.com/wp-content/uploads/2024/07/Group-80513.png);">
-					
-					<table style="width:100%">
-						
-						<td style="width: 50%; padding-right: 30px">
-							 <img src="https://cms.techfresco.com/wp-content/uploads/2024/07/logo.png" style="width:254px;">
-						</td>
-						<td style="width: 50%;color: #fff;font-size: 12px;">
-							<ul style="margin:0;padding: 0;list-style-image: url(https://cms.techfresco.com/wp-content/uploads/2024/07/Ellipse-335.png);">
-								<li>
-									<a href="tel:+442070433795" style="color: #fff;font-size: 12px;text-decoration: none;">+442070433795</a>
-								</li>
-								<li>
-									<a href="mailto:info@techfresco.com" style="color: #fff;font-size: 12px;text-decoration: none;">info@techfresco.com</a>
-								</li>
-							</ul>
-						</td>
-
-					</table>
-
+				<td style="padding: 24px 40px;background: #222222;background-size:cover;font-size: 20px;text-decoration: none;color: #ffffff;text-align: center;">
+					Thanks for using <a href="https://techfresco.com/" style="color: #EE342A;font-size: 20px;text-decoration: none;">Tech Fresco</a>
 				</td>
 			  </tfoot>
 </table>
@@ -95,7 +80,7 @@ export async function POST(request) {
     // Send email to the recipient
     await transporter.sendMail(mailOptionsRecipient);
     // Send email to the client
-    //await transporter.sendMail(mailOptionsClient);
+    await transporter.sendMail(mailOptionsClient);
 
     return NextResponse.json({ message: "Success: emails were sent" });
   } catch (error) {

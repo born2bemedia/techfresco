@@ -7,6 +7,21 @@ import PricingBanner from "./_components/PricingBanner";
 import ServicePlans from "./_components/ServicePlans";
 import OrderPopup from "@/components/OrderPopup";
 
+export async function generateMetadata({ params: { slug } }) {
+  const serviceName = slug.replaceAll("-", "_");
+  const serviceData = services[serviceName];
+
+  return {
+    title: serviceData.seo_title,
+    description: serviceData.seo_description,
+    openGraph: {
+      title: serviceData.seo_title,
+      description: serviceData.seo_description,
+      images: "https://techfresco.com/images/meta.png",
+    },
+  };
+}
+
 const InnerService = ({ params: { slug } }) => {
   const serviceName = slug.replaceAll("-", "_");
   const serviceData = services[serviceName];

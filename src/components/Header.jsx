@@ -99,7 +99,7 @@ const Header = () => {
                 </div>
               </div>
               <Link href="/expertise">Expertise</Link>
-              <Link href="#">Insights</Link>
+              <Link href="/insights">Insights</Link>
               <Link href="#">Career</Link>
               <Link href="/contact">Contact</Link>
             </nav>
@@ -151,11 +151,10 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-            <Link href="#">Expertise</Link>
-            <Link href="#">Insights</Link>
+            <Link href="/expertise">Expertise</Link>
+            <Link href="/insights">Insights</Link>
             <Link href="#">Career</Link>
-            <Link href="#">Contact</Link>
-            <Link href="#">Client Area</Link>
+            <Link href="/contact">Contact</Link>
           </nav>
           <RequestButton className={"bordered-button"} text={"Get Support"} />
           <div className="top-contacts">

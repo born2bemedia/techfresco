@@ -1,0 +1,67 @@
+@import "mixin";
+
+.policy-hero {
+  margin: rem(70) 0 rem(60) 0;
+  @media (max-width: rem(992)) {
+    margin: rem(50) 0 rem(20) 0;
+  }
+  h1 {
+    color: #21282b;
+    font-size: rem(36);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+.policy-wrap {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(70);
+  }
+  article {
+    strong,
+    b {
+      font-weight: 500;
+    }
+    a {
+      color: #ee342a;
+    }
+    p {
+      color: #21282b;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+    }
+    h2 {
+      color: #21282b;
+      font-size: rem(24);
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+      margin: rem(32) 0 rem(16) 0;
+    }
+    h4 {
+      color: #ee342a;
+      font-size: rem(16);
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: left;
+      margin: rem(16) 0 rem(16) 0;
+    }
+    ul,
+    ol {
+      margin: 0 0 rem(16) 0;
+      padding: 0 0 0 rem(24);
+      li {
+        color: #21282b;
+        font-size: rem(16);
+        font-weight: 400;
+        line-height: 1.2;
+        text-align: left;
+      }
+    }
+  }
+}
