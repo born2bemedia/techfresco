@@ -51,6 +51,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
     > a {
       display: flex;
@@ -63,22 +64,42 @@ header {
         display: none;
       }
       > div {
-        position: relative;
-
         .submenu {
-          display: none;
+          display: flex;
           flex-direction: column;
           position: absolute;
           z-index: 99999;
           background: #fff;
           white-space: nowrap;
           padding: rem(20) rem(20);
-          gap: rem(8);
           border-radius: rem(10);
-          top: calc(100% + rem(10));
+          top: calc(100% + rem(16));
           box-shadow: 0 0 rem(20) rgba(0, 0, 0, 0.05);
+          left: 0;
+          width: 100%;
+          pointer-events: none;
+          opacity: 0;
+          transition: all 0.5s;
           &.opened {
+            pointer-events: all;
+            opacity: 1;
             display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: rem(16);
+            height: rem(280);
+          }
+          a {
+            display: flex;
+            height: rem(68);
+            align-items: center;
+            padding: 0 rem(24);
+            background: #f8f8f8;
+            border-radius: rem(16);
+            &:hover {
+              background: #ee342a;
+              color: #fff;
+            }
           }
         }
       }
@@ -147,18 +168,20 @@ header {
 
       .submenu {
         display: none;
-        flex-direction: column;
         position: relative;
         z-index: 99999;
-        background: #fff;
-        white-space: nowrap;
-        padding: rem(20) rem(0);
-        gap: rem(8);
+        background: #f8f8f8;
+        padding: rem(24);
+        row-gap: rem(20);
+        column-gap: rem(16);
+        margin-top: rem(16);
         &.opened {
           display: flex;
+          flex-wrap: wrap;
         }
         a {
-          font-size: rem(18);
+          font-size: rem(14);
+          width: calc(50% - rem(8));
         }
       }
     }
@@ -177,6 +200,43 @@ header {
         justify-content: space-between;
       }
     }
+  }
+
+  button{
+    width: 100%;
+  }
+
+
+  .top-contacts {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+    margin: rem(30) 0 rem(20) 0;
+    justify-content: space-between;
+    a {
+      display: flex;
+      align-items: flex-start;
+      gap: rem(8);
+      font-size: rem(15);
+      font-weight: 300;
+      line-height: 1.2;
+      text-align: left;
+      color: #21282b;
+
+      svg {
+        margin-top: -rem(3);
+        width: rem(24);
+      }
+      > span {
+        width: calc(100% - rem(24));
+      }
+    }
+  }
+  .soc {
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    justify-content: flex-start;
   }
 
   .account {

@@ -126,7 +126,7 @@ const Header = () => {
                 onClick={() => servicesOpen()}
               >
                 Services
-                <img src="/images/menu-arrow.svg" />
+                <img src="/images/menu-arrow-mob.svg" />
               </Link>
               <div className={`submenu ${servicesOpened ? "opened" : ""}`}>
                 <Link href="/service/cloud-services">Cloud services</Link>
@@ -158,6 +158,27 @@ const Header = () => {
             <Link href="#">Client Area</Link>
           </nav>
           <RequestButton className={"bordered-button"} text={"Get Support"} />
+          <div className="top-contacts">
+              <Link href="tel:+420910921065">
+                <PhoneIcon />
+                <span>+420 910 921 065</span>
+              </Link>
+              <Link href="mailto:info@techfresco.com">
+                <MailIcon />
+                <span>info@techfresco.com </span>
+              </Link>
+            </div>
+            <div className="soc">
+              <Link href="https://www.facebook.com/techfresco/">
+                <Facebook />
+              </Link>
+              <Link href="https://www.instagram.com/techfresco/">
+                <Instagram />
+              </Link>
+              <Link href="https://x.com/techfresco_com">
+                <X />
+              </Link>
+            </div>
         </div>
       </div>
     </>

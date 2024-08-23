@@ -25,7 +25,7 @@ const ContactBlock = () => {
               variants={fadeInUp}
             >
               <img src="/images/home/contact1.svg" />
-              <span>Money-back guarantee</span>
+              <span>Dedicated project managers</span>
             </motion.div>
             <motion.div
               initial="hidden"
