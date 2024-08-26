@@ -237,3 +237,57 @@
     }
   }
 }
+
+.job-form-wrap {
+  margin-bottom: rem(100);
+  @media (max-width: rem(992)) {
+    margin-bottom: rem(80);
+  }
+  .job-form {
+    background: #ffffff;
+    border-radius: rem(16);
+    padding: rem(80) rem(24);
+    h2 {
+      color: #21282b;
+      font-size: rem(40);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      margin: 0 0 rem(40) 0;
+      @media (max-width: rem(992)) {
+        font-size: rem(24);
+      }
+    }
+    form {
+      max-width: rem(672);
+      margin: 0 auto;
+      > div {
+        &.checkbox {
+          label {
+            color: #21282b;
+          }
+        }
+
+        input,
+        textarea {
+          background: #f8f8f8;
+          &.invalid {
+            background: rgb(252, 214, 212);
+          }
+        }
+      }
+      .file-wrap {
+        .upload-custom {
+          background: #f8f8f8;
+        }
+      }
+    }
+    .success-message {
+      max-width: rem(672);
+      margin: rem(32) auto 0 auto;
+      span{
+        color: #21282b;
+      }
+    }
+  }
+}

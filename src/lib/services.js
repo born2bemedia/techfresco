@@ -477,6 +477,9 @@ const services = {
       "Remote Assistance",
       "Configuration",
       "Maintenance",
+      "Remote Assistance",
+      "Configuration",
+      "Maintenance",
     ],
     categoriesTitle: "Instant Tech Support Services",
     categories: [
@@ -577,6 +580,9 @@ const services = {
     seo_description:
       "Discover our Digital Transformation Services, helping businesses modernise operations, integrate new technologies, and drive innovation. Achieve growth through digital transformation.",
     advantages: [
+      "Integration ",
+      "Analytics",
+      "Management",
       "Integration ",
       "Analytics",
       "Management",
@@ -690,6 +696,9 @@ const services = {
       "Tools",
       "Monitoring",
       "Management",
+      "Tools",
+      "Monitoring",
+      "Management",
     ],
     categoriesTitle: "Instant Mobile and Remote Networking Services",
     categories: [
@@ -789,6 +798,9 @@ const services = {
     seo_description:
       "Discover our managed IT services, which provide ongoing IT management, monitoring, and support. Ensure your business operates smoothly with our proactive IT solutions.",
     advantages: [
+      "Planning",
+      "Management",
+      "Recovery",
       "Planning",
       "Management",
       "Recovery",
@@ -901,6 +913,9 @@ const services = {
       "Migration",
       "Recovery",
       "Protection",
+      "Migration",
+      "Recovery",
+      "Protection",
     ],
     categoriesTitle: "Instant Email Services",
     categories: [
@@ -1000,6 +1015,9 @@ const services = {
     seo_description:
       "Enhance your team's skills with our Technology Training services. Customised training solutions for businesses to improve IT proficiency and efficiency.",
     advantages: [
+      "Training",
+      "Programs",
+      "Courses",
       "Training",
       "Programs",
       "Courses",

@@ -11,7 +11,7 @@ Businesses across various sectors are ramping up their cybersecurity investments
 
 Recent data indicates that companies with advanced cybersecurity measures have seen a **45% reduction in downtime** caused by cyber incidents. Additionally, organisations report a **30% decrease in operational costs** due to fewer disruptions and improved threat detection capabilities.
 
-![](/images/insights/article3_inner.png)
+![](/images/insights/article3_inner.svg)
 
 In response to these trends, **67% of enterprises** plan to increase their cybersecurity budgets by at least **20% next year**, focusing on AI-driven threat detection, multi-factor authentication, and robust incident response strategies. This proactive approach is expected to safeguard business operations and enhance customer trust in an increasingly digital marketplace.
 

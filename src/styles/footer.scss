@@ -44,10 +44,13 @@ footer {
           flex-wrap: wrap;
           height: rem(56);
           gap: rem(16);
-          column-gap: 0;
           align-items: flex-start;
         }
         li {
+          @media (max-width: rem(992)) {
+            width: calc(50% - rem(8));
+            text-align: left;
+          }
           a {
             color: #878787;
             font-weight: 400;
@@ -148,12 +151,15 @@ footer {
       > div {
         width: 33.33%;
         @media (max-width: rem(992)) {
-          width: 50%;
+          width: calc(50% - rem(8));
           &:last-child {
             width: 100%;
             ul {
               flex-wrap: wrap;
               height: rem(56);
+              li{
+                width: calc(50% - rem(8));
+              }
             }
           }
         }

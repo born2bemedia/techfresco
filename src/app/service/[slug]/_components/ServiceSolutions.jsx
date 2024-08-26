@@ -46,7 +46,7 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     loop: true,
     autoplaySpeed: 3000,
     responsive: [
@@ -111,18 +111,24 @@ const ServiceSolutions = ({ categories, categoriesTitle }) => {
           >
             <h2>{categoriesTitle}</h2>
             <div className="arrows">
-              <img
-                src="/images/home/arrowPrev.svg"
-                alt="Previous"
-                onClick={handlePrevClick}
-                style={{ cursor: "pointer" }}
-              />
-              <img
-                src="/images/home/arrowNext.svg"
-                alt="Next"
-                onClick={handleNextClick}
-                style={{ cursor: "pointer" }}
-              />
+              {categories.length > 4 ? (
+                <>
+                  <img
+                    src="/images/home/arrowPrev.svg"
+                    alt="Previous"
+                    onClick={handlePrevClick}
+                    style={{ cursor: "pointer" }}
+                  />
+                  <img
+                    src="/images/home/arrowNext.svg"
+                    alt="Next"
+                    onClick={handleNextClick}
+                    style={{ cursor: "pointer" }}
+                  />
+                </>
+              ) : (
+                ""
+              )}
             </div>
           </motion.div>
           <motion.div

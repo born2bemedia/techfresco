@@ -165,7 +165,10 @@ const HowItWorks = () => {
           variants={fadeInUp}
           className="how-it-works__banner"
         >
-          <h2>Want the same results for your business? Contact us now!</h2>
+          <h2>
+            Want the same results for your business? <br />
+            Contact us now!
+          </h2>
           <RequestButton className={"red-button"} text={"Get Assistance"} />
         </motion.div>
       </div>

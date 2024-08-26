@@ -17,8 +17,8 @@ const PricingBanner = () => {
           className="pricing-banner__body"
         >
           <h2>
-            For a detailed quote or customised pricing, please contact us
-            directly.
+            For a detailed quote or customised pricing, <br />
+            please contact us directly.
           </h2>
           <RequestButton className={"red-button"} text={"Get Assistance"} />
         </motion.div>

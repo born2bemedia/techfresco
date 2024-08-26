@@ -44,7 +44,8 @@ const PostCard = ({ post, index }) => {
 
   return (
     <>
-      <div
+      <Link
+        href={`/insights/${post.slug}`}
         ref={(el) => (divRefs.current[index] = el)}
         onMouseEnter={() => handleMouseEnter(index)}
         onMouseLeave={handleMouseLeave}
@@ -55,9 +56,8 @@ const PostCard = ({ post, index }) => {
         <span>{post.category}</span>
         <h3>{post.title}</h3>
         <p>{post.excerpt}</p>
-        <Link
+        <span
           className="red-button"
-          href={`/insights/${post.slug}`}
           style={{
             position: "absolute",
             left:
@@ -72,8 +72,8 @@ const PostCard = ({ post, index }) => {
         >
           <span>Read</span>
           <img src="/images/whiteArrow.svg" />
-        </Link>
-      </div>
+        </span>
+      </Link>
     </>
   );
 };

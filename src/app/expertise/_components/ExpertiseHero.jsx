@@ -21,6 +21,9 @@ const ExpertiseHero = () => {
     "Skills",
     "People",
     "Results",
+    "Skills",
+    "People",
+    "Results",
   ];
 
   return (

@@ -154,6 +154,11 @@
           line-height: 1.2;
           text-align: left;
           margin: 0;
+          @media (max-width: rem(992)) {
+            br{
+              display: none;
+            }
+          }
         }
       }
       .image {
@@ -209,6 +214,11 @@
             line-height: 1.2;
             text-align: left;
             margin: 0;
+            @media (max-width: rem(992)) {
+              br{
+                display: none;
+              }
+            }
           }
         }
         .value {
