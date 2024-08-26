@@ -81,8 +81,9 @@ const WhyOurExpertise = () => {
               <div>
                 <h3>Faster Time-to-Market</h3>
                 <p>
-                  By deploying cutting-edge cybersecurity measures and proactive
-                  risk management, we reduce system downtime by up to 60%.
+                  Companies with optimised cloud infrastructure solutions
+                  achieve 2.5 times faster time-to-market with quicker product
+                  launches.
                 </p>
               </div>
             </motion.div>
