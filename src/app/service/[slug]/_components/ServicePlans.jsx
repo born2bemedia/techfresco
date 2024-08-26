@@ -56,7 +56,7 @@ const ServicePlans = ({ title, plans }) => {
                   </ul>
                 </div>
                 <div className="plan-bottom">
-                  <p dangerouslySetInnerHTML={{ __html: plan.price }} />
+                  
                   <button
                     className="bordered-button"
                     onClick={() => orderPopupOpen(`${title}: ${plan.planName}`)}
