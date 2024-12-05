@@ -154,7 +154,7 @@ const Footer = () => {
             <Link href="https://www.instagram.com/techfresco/">
               <Instagram />
             </Link>
-            <Link href="https://x.com/techfresco_com">
+            <Link href="https://x.com/tech_fresco">
               <X />
             </Link>
           </div>

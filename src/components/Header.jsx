@@ -54,7 +54,7 @@ const Header = () => {
               <Link href="https://www.instagram.com/techfresco/">
                 <Instagram />
               </Link>
-              <Link href="https://x.com/techfresco_com">
+              <Link href="https://x.com/tech_fresco">
                 <X />
               </Link>
             </div>
@@ -174,7 +174,7 @@ const Header = () => {
             <Link href="https://www.instagram.com/techfresco/">
               <Instagram />
             </Link>
-            <Link href="https://x.com/techfresco_com">
+            <Link href="https://x.com/tech_fresco">
               <X />
             </Link>
           </div>
