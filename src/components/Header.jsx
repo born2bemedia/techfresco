@@ -11,6 +11,7 @@ import Facebook from "@/icons/social/Facebook";
 import YouTube from "@/icons/social/YouTube";
 import X from "@/icons/social/X";
 import RequestButton from "./RequestButton";
+import LangSwitcher from "./LangSwitcher";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -103,6 +104,8 @@ const Header = () => {
               <Link href="/career">Career</Link>
               <Link href="/contact">Contact</Link>
             </nav>
+
+            <LangSwitcher />
 
             <RequestButton className={"bordered-button"} text={"Get Support"} />
 

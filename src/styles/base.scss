@@ -38,6 +38,9 @@ body {
     background-color: #ee342a;
     border-radius: rem(100);
   }
+  > .skiptranslate {
+    display: none !important;
+  }
 }
 * {
   outline: none !important;
