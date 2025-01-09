@@ -44,7 +44,12 @@ const LangSwitcher = () => {
           cursor: "pointer",
         }}
       >
-        <img src={`/images/${currentLang}.svg`} />
+        <img
+          src={`/images/${currentLang}.svg`}
+          style={{
+            width: "28px",
+          }}
+        />
       </button>
 
       {isDropdownOpen && (
@@ -74,7 +79,12 @@ const LangSwitcher = () => {
               color: "#2D2C2B",
             }}
           >
-            <img src="/images/EN.svg" />
+            <img
+              src="/images/EN.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             English
           </li>
           <li
@@ -88,7 +98,12 @@ const LangSwitcher = () => {
               color: "#2D2C2B",
             }}
           >
-            <img src="/images/DE.svg" />
+            <img
+              src="/images/DE.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             German
           </li>
           <li
@@ -102,8 +117,32 @@ const LangSwitcher = () => {
               color: "#2D2C2B",
             }}
           >
-            <img src="/images/IT.svg" />
+            <img
+              src="/images/IT.svg"
+              style={{
+                width: "28px",
+              }}
+            />
             Italian
+          </li>
+          <li
+            onClick={() => handleLanguageChange("cs", "CS")}
+            style={{
+              padding: "7px 0",
+              cursor: "pointer",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              color: "#2D2C2B",
+            }}
+          >
+            <img
+              src="/images/CS.svg"
+              style={{
+                width: "28px",
+              }}
+            />
+            Czech
           </li>
         </ul>
       )}
