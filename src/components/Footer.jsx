@@ -72,7 +72,9 @@ const Footer = () => {
                     <Link href="/service/cybersecurity">Cybersecurity</Link>
                   </li>
                   <li>
-                    <Link href="/service/backup-solutions">Backup solutions</Link>
+                    <Link href="/service/backup-solutions">
+                      Backup solutions
+                    </Link>
                   </li>
                   <li>
                     <Link href="/service/it-consulting">IT consulting</Link>
@@ -148,9 +150,6 @@ const Footer = () => {
             </li>
           </ul>
           <div className="soc">
-            <Link href="https://www.facebook.com/techfresco/">
-              <Facebook />
-            </Link>
             <Link href="https://www.instagram.com/techfresco/">
               <Instagram />
             </Link>

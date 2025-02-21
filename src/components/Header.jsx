@@ -49,9 +49,6 @@ const Header = () => {
               </Link>
             </div>
             <div className="soc">
-              <Link href="https://www.facebook.com/techfresco/">
-                <Facebook />
-              </Link>
               <Link href="https://www.instagram.com/techfresco/">
                 <Instagram />
               </Link>
