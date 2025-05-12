@@ -13,7 +13,7 @@ const Preloader = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setTimeout(() => setIsVisible(false), 200);
-    }, 250);
+    }, 1000);
     return () => clearTimeout(timer);
   }, [pathname]);
 

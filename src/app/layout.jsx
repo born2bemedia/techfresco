@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="cs">
       <body className={outfit.className}>
         <GoogleAnalytics gaId="G-61E1Q9SSHK" />
         <PopupsProvider>
