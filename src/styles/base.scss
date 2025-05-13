@@ -15,6 +15,7 @@ textarea {
 body {
   margin: 0;
   background: #f8f8f8;
+  top: unset !important;
   @media (max-width: rem(992)) {
   }
   &.no-scroll {

@@ -49,9 +49,9 @@ const Header = () => {
               </Link>
             </div>
             <div className="soc">
-            <Link href="https://www.facebook.com/techfrescocom/">
-              <Facebook />
-            </Link>
+              <Link href="https://www.facebook.com/techfrescocom/">
+                <Facebook />
+              </Link>
               <Link href="https://www.instagram.com/techfresco/">
                 <Instagram />
               </Link>
@@ -105,9 +105,14 @@ const Header = () => {
               <Link href="/contact">Contact</Link>
             </nav>
 
-            <LangSwitcher />
+            <div className="header-actions">
+              <LangSwitcher />
 
-            <RequestButton className={"bordered-button"} text={"Get Support"} />
+              <RequestButton
+                className={"bordered-button"}
+                text={"Get Support"}
+              />
+            </div>
 
             <span onClick={() => menuOpen()} className="menu-btn">
               {!menuOpened ? (

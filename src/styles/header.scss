@@ -120,6 +120,12 @@ header {
       }
     }
 
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: rem(16);
+    }
+
     .bordered-button {
       @media (max-width: rem(992)) {
         display: none;
