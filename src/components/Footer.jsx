@@ -150,6 +150,9 @@ const Footer = () => {
             </li>
           </ul>
           <div className="soc">
+          <Link href="https://www.facebook.com/techfrescocom/">
+              <Facebook />
+            </Link>
             <Link href="https://www.instagram.com/techfresco/">
               <Instagram />
             </Link>
