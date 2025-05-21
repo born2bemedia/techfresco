@@ -7,6 +7,7 @@ import ThanksPopup from "./ThanksPopup";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
+import { excludedCountries } from "@/utils/excludedCountries";
 
 const RequestForm = () => {
   const { thanksPopupDisplay, setThanksPopupDisplay } = usePopup();
@@ -108,6 +109,7 @@ const RequestForm = () => {
                     onChange={(value) => setFieldValue("phone", value)}
                     placeholder="Your phone"
                     className={touched.phone && errors.phone ? "invalid" : ""}
+                    excludeCountries={excludedCountries}
                   />
                   <ErrorMessage name="phone" component="span" />
                 </div>

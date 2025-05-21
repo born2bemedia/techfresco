@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import useCountryCode from "@/utils/useCountryCode";
 import CheckboxIcon from "@/icons/CheckboxIcon";
+import { excludedCountries } from "@/utils/excludedCountries";
 
 function RequestPopupJob() {
   const { requestPopupDisplayJob, setRequestPopupDisplayJob } = usePopup();
@@ -187,6 +188,7 @@ function RequestPopupJob() {
                           className={
                             touched.phone && errors.phone ? "invalid" : ""
                           }
+                          excludeCountries={excludedCountries}
                         />
                         <ErrorMessage
                           name="phone"

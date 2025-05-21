@@ -7,6 +7,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import useCountryCode from "@/utils/useCountryCode";
 import CheckboxIcon from "@/icons/CheckboxIcon";
+import { excludedCountries } from "@/utils/excludedCountries";
 
 function JobForm() {
   const countryCode = useCountryCode();
@@ -158,6 +159,7 @@ function JobForm() {
                       onChange={(value) => setFieldValue("phone", value)}
                       placeholder="Phone"
                       className={touched.phone && errors.phone ? "invalid" : ""}
+                      excludeCountries={excludedCountries}
                     />
                     <ErrorMessage
                       name="phone"

@@ -16,6 +16,7 @@ import Select, { components } from "react-select";
 import "react-phone-input-2/lib/style.css";
 import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
+import { excludedCountries } from "@/utils/excludedCountries";
 
 function RequestPopup() {
   const { requestPopupDisplay, setRequestPopupDisplay, serviceValue } =
@@ -312,6 +313,7 @@ function RequestPopup() {
                           className={
                             touched.phone && errors.phone ? "invalid" : ""
                           }
+                          excludeCountries={excludedCountries}
                         />
                         <ErrorMessage name="phone" component="span" />
                       </div>
