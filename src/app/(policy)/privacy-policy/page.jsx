@@ -25,7 +25,7 @@ export async function generateMetadata({ params: { locale } }) {
     title: page.title,
     openGraph: {
       title: page.title,
-      images: "ttps://techfresco.com/images/meta.png",
+      images: "https://techfresco.com/images/meta.png",
     },
   };
 }
