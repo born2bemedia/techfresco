@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import CheckboxIcon from "@/icons/CheckboxIcon";
@@ -9,10 +9,16 @@ import PhoneInput from "react-phone-input-2";
 import useCountryCode from "@/utils/useCountryCode";
 import Select, { components } from "react-select";
 import { excludedCountries } from "@/utils/excludedCountries";
+import ReCaptcha from "react-google-recaptcha";
 
 const ContactForm = () => {
   const { thanksPopupDisplay, setThanksPopupDisplay } = usePopup();
   const countryCode = useCountryCode();
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+
+  const onCaptchaVerify = (token) => {
+    setIsCaptchaVerified(!!token);
+  };
 
   const services = [
     { value: "Cloud services", label: "Cloud services" },
@@ -380,11 +386,11 @@ const ContactForm = () => {
                     </span>
                   </label>
                 </div>
-
+                <ReCaptcha sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY} onChange={onCaptchaVerify} />
                 <button
                   type="submit"
                   className="red-button"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !isCaptchaVerified}
                 >
                   Submit
                 </button>
